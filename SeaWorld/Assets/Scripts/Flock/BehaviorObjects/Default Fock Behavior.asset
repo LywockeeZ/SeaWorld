@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d257fa725b15e3e4c9cc80679dd839e1, type: 3}
+  m_Name: Default Fock Behavior
+  m_EditorClassIdentifier: 
+  behaviors:
+  - {fileID: 11400000, guid: 72dfa68dd55958d498bc2cd312d404d9, type: 2}
+  - {fileID: 11400000, guid: b1193bc1fb4d89d4094874a1bed625c5, type: 2}
+  - {fileID: 11400000, guid: 68df1a4d07e229e499d3600d821ccd34, type: 2}
+  weights:
+  - 4
+  - 1
+  - 2

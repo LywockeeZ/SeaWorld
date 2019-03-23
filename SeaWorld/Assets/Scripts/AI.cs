@@ -30,7 +30,6 @@ public class AI : MonoBehaviour
     {
         yield return new WaitForSeconds(directionChangeTime);
         direction = new Vector3(Random.Range(-1,2), Random.Range(-1,2), 0);
-        Debug.Log(direction);
         StartCoroutine(ChangeDirection());
     }
 }
