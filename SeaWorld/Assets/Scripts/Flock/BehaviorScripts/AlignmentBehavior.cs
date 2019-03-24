@@ -8,7 +8,7 @@ public class AlignmentBehavior : FilterFlockBehavior
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
     {
         //如果没有邻居，维持原样
-        if (context.Count == 0)
+        if (context.Count == 0 || (filter.Filter(agent, context).Count == 0))
         {
             return Vector2.zero;
         }
@@ -20,7 +20,7 @@ public class AlignmentBehavior : FilterFlockBehavior
         {
             alignmentMove += (Vector2)item.transform.up;
         }
-        alignmentMove /= context.Count;
+        alignmentMove /= filteredContext.Count;
 
         return alignmentMove;
     }

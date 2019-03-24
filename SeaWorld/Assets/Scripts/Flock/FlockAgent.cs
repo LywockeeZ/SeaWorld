@@ -25,7 +25,8 @@ public class FlockAgent : MonoBehaviour
     //需要改进的地方
     public void Move(Vector2 velocity)
     {
-        transform.up = velocity;
+
+        transform.up = Vector2.Lerp(transform.up,velocity,10*Time.deltaTime);
         transform.position += (Vector3)velocity * Time.deltaTime;
     }
 }

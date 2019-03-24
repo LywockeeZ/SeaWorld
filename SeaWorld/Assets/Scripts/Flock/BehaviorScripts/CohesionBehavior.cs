@@ -8,7 +8,7 @@ public class CohesionBehavior : FilterFlockBehavior
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
     {
         //如果没有邻居，就不用调整
-        if (context.Count == 0)
+        if (context.Count == 0 || (filter.Filter(agent, context).Count == 0))
         {
             return Vector2.zero;
         }
@@ -20,7 +20,7 @@ public class CohesionBehavior : FilterFlockBehavior
         {
             cohesionMove += (Vector2)item.position;
         }
-        cohesionMove /= context.Count;
+        cohesionMove /= filteredContext.Count;
 
         //对agent的位置计算一下偏差
         cohesionMove -= (Vector2)agent.transform.position;
