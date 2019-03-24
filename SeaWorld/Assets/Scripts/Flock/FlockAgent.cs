@@ -27,8 +27,11 @@ public class FlockAgent : MonoBehaviour
     {
         Vector3 _velocity = (Vector3)velocity;//new Vector3(velocity.x, velocity.y, 0);
         //transform.forward = velocity;
-        Quaternion rotate = Quaternion.LookRotation(_velocity, Vector3.up);
-        transform.localRotation = Quaternion.Slerp(transform.localRotation, rotate, 5 * Time.deltaTime);
+        if (velocity.magnitude != 0)
+        {
+            Quaternion rotate = Quaternion.LookRotation(_velocity, Vector3.up);
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, rotate, 5 * Time.deltaTime);
+        }
         transform.position += (Vector3)velocity * Time.deltaTime;
     }
 }

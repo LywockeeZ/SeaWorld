@@ -42,6 +42,7 @@ public class MovementController : MonoBehaviour
             {
                 mousePos = hitInfo.point;
             }
+
             Direction = mousePos - transform.position;
             isRotating = true;
         }
