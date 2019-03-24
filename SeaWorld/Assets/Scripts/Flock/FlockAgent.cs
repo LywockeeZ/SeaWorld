@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Collider))]
 public class FlockAgent : MonoBehaviour
 {
     Flock agentFlock;
     public Flock AgentFlock { get { return agentFlock; } }
 
-    Collider2D agentCollider;
-    public Collider2D AgentCollider { get { return agentCollider; } }
+    Collider agentCollider;
+    public Collider AgentCollider { get { return agentCollider; } }
 
     // Start is called before the first frame update
     void Start()
     {
-        agentCollider = GetComponent<Collider2D>();
+        agentCollider = GetComponent<Collider>();
     }
 
     public void Initialize(Flock flock)
@@ -25,8 +25,10 @@ public class FlockAgent : MonoBehaviour
     //需要改进的地方
     public void Move(Vector2 velocity)
     {
-
-        transform.up = Vector2.Lerp(transform.up,velocity,10*Time.deltaTime);
+        Vector3 _velocity = (Vector3)velocity;//new Vector3(velocity.x, velocity.y, 0);
+        //transform.forward = velocity;
+        Quaternion rotate = Quaternion.LookRotation(_velocity, Vector3.up);
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, rotate, 5 * Time.deltaTime);
         transform.position += (Vector3)velocity * Time.deltaTime;
     }
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Avoidance")]
 public class AvoidanceBehavior : FilterFlockBehavior
 {
+    Vector2 currentVelocity;
+    public float agentSmoothTime = 0.5f;
+
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
     {
         //如果没有邻居，就不用调整
@@ -24,6 +27,8 @@ public class AvoidanceBehavior : FilterFlockBehavior
             {
                 nAvoid++;
                 avoidanceMove += (Vector2)(agent.transform.position - item.position);
+                //avoidanceMove = Vector2.SmoothDamp(agent.transform.forward, avoidanceMove, ref currentVelocity, agentSmoothTime);
+                //avoidanceMove = Vector2.Lerp(agent.transform.forward, avoidanceMove, agentSmoothTime);
             }
 
         }

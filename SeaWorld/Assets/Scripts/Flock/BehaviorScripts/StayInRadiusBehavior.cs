@@ -5,12 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Stay In Radius")]
 public class StayInRadiusBehavior : FlockBehaviour
 {
-    public Vector2 center;
+    public Vector3 center;
     public float radius = 15f;
 
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
     {
-        Vector2 centerOffset = center - (Vector2)agent.transform.position;
+        Vector2 centerOffset = center - (Vector3)agent.transform.position;
         float t = centerOffset.magnitude / radius;
         if (t < 0.9f)
         {

@@ -28,7 +28,7 @@ public class SteeredCohesionBehavior : FilterFlockBehavior
 
         //对agent的位置计算一下偏差
         cohesionMove -= (Vector2)agent.transform.position;
-        cohesionMove = Vector2.SmoothDamp(agent.transform.up, cohesionMove, ref currentVelocity, agentSmoothTime);
+        cohesionMove = Vector2.SmoothDamp(agent.transform.forward, cohesionMove, ref currentVelocity, agentSmoothTime);
         return cohesionMove;
     }
 }

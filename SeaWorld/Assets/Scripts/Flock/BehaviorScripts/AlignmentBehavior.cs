@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Alignment")]
 public class AlignmentBehavior : FilterFlockBehavior
 {
+
+
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
     {
         //如果没有邻居，维持原样
@@ -18,7 +20,7 @@ public class AlignmentBehavior : FilterFlockBehavior
         List<Transform> filteredContext = (filter == null) ? context : filter.Filter(agent, context);
         foreach (Transform item in filteredContext)
         {
-            alignmentMove += (Vector2)item.transform.up;
+            alignmentMove += (Vector2)item.transform.forward;
         }
         alignmentMove /= filteredContext.Count;
 
