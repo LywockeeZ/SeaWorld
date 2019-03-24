@@ -27,6 +27,7 @@ public class FlockAgent : MonoBehaviour
     {
         Vector3 _velocity = (Vector3)velocity;//new Vector3(velocity.x, velocity.y, 0);
         //transform.forward = velocity;
+        //消除为零时的警告信息
         if (velocity.magnitude != 0)
         {
             Quaternion rotate = Quaternion.LookRotation(_velocity, Vector3.up);
