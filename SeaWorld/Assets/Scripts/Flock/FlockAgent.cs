@@ -22,6 +22,7 @@ public class FlockAgent : MonoBehaviour
         agentFlock = flock;
     }
 
+    //需要改进的地方
     public void Move(Vector2 velocity)
     {
         transform.up = velocity;
