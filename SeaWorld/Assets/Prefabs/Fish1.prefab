@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6182763256939464815}
   m_Layer: 0
   m_Name: Fish1
-  m_TagString: Untagged
+  m_TagString: Rank1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,11 +104,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b7f8d32d57a0d47992dbaed74ec5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rank: Rank1
   idleSpeed: 1
   followSpeed: 2
   angleSpeed: 5
   maxDirectionChangeTime: 5
-  followRadius: 4
+  neighborRadius: 3
+  avoidanceRadiusMultiplier: 0.7
 --- !u!135 &6182763256939464815
 SphereCollider:
   m_ObjectHideFlags: 0

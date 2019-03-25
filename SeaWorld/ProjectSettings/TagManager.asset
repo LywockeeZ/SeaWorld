@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerFlock
+  - Rank1
+  - Rank2
+  - Rank3
   layers:
   - Default
   - TransparentFX

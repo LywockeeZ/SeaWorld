@@ -39,9 +39,13 @@ public class AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Vector2 move = Vector2.zero;
         List<Transform> context = GetNearbyObjects();
-        Vector2 move = CalculateMove(context);
+        if (context != null)
+        {
+             move = CalculateMove(context);
+        }
+        
         if (_target != null)
         {
             isFollowing = true;
@@ -70,8 +74,8 @@ public class AI : MonoBehaviour
         direction = targetPos - transform.position;
         Turn();
         //Move(followSpeed);
-        transform.position += followSpeed * new Vector3(direction.x, direction.y, 0).normalized * Time.deltaTime;
-        transform.position += followSpeed * new Vector3(avoidanceMove.x, avoidanceMove.y, 0).normalized * Time.deltaTime;
+        transform.position += followSpeed * (new Vector3(direction.x, direction.y, 0) + new Vector3(avoidanceMove.x, avoidanceMove.y, 0)).normalized * Time.deltaTime;
+        //transform.position += followSpeed * new Vector3(avoidanceMove.x, avoidanceMove.y, 0).normalized * Time.deltaTime;
     }
 
 
@@ -133,8 +137,9 @@ public class AI : MonoBehaviour
 
     List<Transform> GetNearbyObjects()
     {
-        List<Transform> context = null;
+        List<Transform> context = new List<Transform>();
         Collider[] colliders = Physics.OverlapSphere(transform.position, neighborRadius);
+        bool isExistingTarget = false;
         foreach (Collider c in colliders)
         {
             //获取同类鱼
@@ -145,8 +150,13 @@ public class AI : MonoBehaviour
             //获取要跟随的鱼
             if (c.gameObject.tag == "PlayerFlock")
             {
+                isExistingTarget = true;
                 _target = c.gameObject;
             }
+        }
+        if (!isExistingTarget)
+        {
+            _target = null;
         }
         return context;
     }
