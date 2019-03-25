@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 45574771}
   m_Layer: 0
   m_Name: Fish
-  m_TagString: Untagged
+  m_TagString: PlayerFlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227b4458e3d6ac64e9d0e914c4f9dd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 4
   angleSpeed: 5
   CanMove: 1
 --- !u!65 &45574772
@@ -234,7 +234,7 @@ GameObject:
   m_Layer: 0
   m_Name: trail2
   m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -429,7 +429,7 @@ GameObject:
   m_Layer: 0
   m_Name: trail1
   m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -690,6 +690,7 @@ MonoBehaviour:
   - {fileID: 8723970388381702014, guid: fb51a64d561fcaa4ca08c65363c3b2eb, type: 3}
   - {fileID: 8796867338116389881, guid: 2dd9c173bbcb10a468dcc9d4985a8626, type: 3}
   - {fileID: 8723970388381702014, guid: 4d84193f0bda22e419ca28d8b67fc345, type: 3}
+  maxCount: 20
 --- !u!1 &594750182
 GameObject:
   m_ObjectHideFlags: 0

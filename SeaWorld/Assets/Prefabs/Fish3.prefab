@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8538275564087159674}
   - component: {fileID: 3463286101487476295}
   - component: {fileID: 3183572586422548322}
-  - component: {fileID: 6539605452945519355}
   - component: {fileID: 9073767456238610776}
   - component: {fileID: 8964374448970887306}
+  - component: {fileID: 4593958063113269816}
   m_Layer: 0
   m_Name: Fish3
   m_TagString: Untagged
@@ -80,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6539605452945519355
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8723970388381702014}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9073767456238610776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,5 +105,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idleSpeed: 1
-  maxDirectionChangeTime: 5
+  followSpeed: 2
   angleSpeed: 5
+  maxDirectionChangeTime: 5
+  followRadius: 4
+--- !u!135 &4593958063113269816
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8723970388381702014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
