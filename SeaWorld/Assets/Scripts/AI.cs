@@ -11,6 +11,7 @@ public class AI : MonoBehaviour
     public float followSpeed = 1.5f;
     public float angleSpeed = 5f;
     public float maxDirectionChangeTime = 5f;
+    //进入检测范围的半径
     [Range(1,50)]
     public float neighborRadius = 3f;
     [Range(0f, 1f)]
@@ -40,6 +41,7 @@ public class AI : MonoBehaviour
     void Update()
     {
         Vector2 move = Vector2.zero;
+        //获取周围的对象，同时给要跟随的对象赋值
         List<Transform> context = GetNearbyObjects();
         if (context != null)
         {
