@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 9144040098294445271}
   - component: {fileID: 2682906560715198966}
   - component: {fileID: 8960108472682407194}
-  - component: {fileID: 1278628167541652690}
+  - component: {fileID: 7440226741098753555}
+  - component: {fileID: 322673852593687342}
+  - component: {fileID: 33649608398224140}
   m_Layer: 0
   m_Name: Fish2
   m_TagString: Rank2
@@ -101,18 +103,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 8796867338116389881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b7f8d32d57a0d47992dbaed74ec5f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e109f682b33b5745b548b1561c60dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: Rank2
   idleSpeed: 1
-  followSpeed: 2
+  followSpeed: 2.5
   angleSpeed: 5
   maxDirectionChangeTime: 5
-  neighborRadius: 3
-  avoidanceRadiusMultiplier: 0.7
---- !u!135 &1278628167541652690
+  neighborRadius: 4
+  avoidanceRadiusMultiplier: 0.5
+--- !u!135 &7440226741098753555
 SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8796867338116389881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0.4}
+--- !u!54 &322673852593687342
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8796867338116389881}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!65 &33649608398224140
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,5 +153,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

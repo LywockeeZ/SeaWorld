@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject Target;
+    
     public float CamDistance;
     public float moveSpeed = 1f;
-    Transform targetTrans;
+    Vector3 targetPos;
+
+    private void Awake()
+    {
+        //Target = FlockManager.Instance.FlockPrefab;
+    }
     void Start()
     {
-        targetTrans = Target.GetComponent<Transform>();
         CamDistance = transform.position.z;
     }
 
     void Update()
     {
+        targetPos = FlockManager.Instance.Flocks[0].position;
         transform.position = Vector3.Slerp(transform.position,
-            new Vector3(targetTrans.position.x, targetTrans.position.y, CamDistance), 
-            moveSpeed * Time.deltaTime);
+                                           new Vector3(targetPos.x, targetPos.y, CamDistance), 
+                                           moveSpeed * Time.deltaTime);
     }
 }

@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 3183572586422548322}
   - component: {fileID: 6473785996778146626}
   - component: {fileID: 1405292624655348544}
-  - component: {fileID: 6182763256939464815}
+  - component: {fileID: 919501849238104140}
+  - component: {fileID: 9034393545766316770}
+  - component: {fileID: 7260090381628648835}
   m_Layer: 0
   m_Name: Fish1
   m_TagString: Rank1
@@ -101,18 +103,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 8723970388381702014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b7f8d32d57a0d47992dbaed74ec5f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e109f682b33b5745b548b1561c60dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: Rank1
   idleSpeed: 1
-  followSpeed: 2
+  followSpeed: 2.5
   angleSpeed: 5
   maxDirectionChangeTime: 5
-  neighborRadius: 3
-  avoidanceRadiusMultiplier: 0.7
---- !u!135 &6182763256939464815
+  neighborRadius: 4
+  avoidanceRadiusMultiplier: 0.5
+--- !u!135 &919501849238104140
 SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8723970388381702014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0.4}
+--- !u!54 &9034393545766316770
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8723970388381702014}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!65 &7260090381628648835
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,5 +153,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

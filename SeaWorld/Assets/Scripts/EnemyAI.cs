@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AI : MonoBehaviour
+public class EnemyAI : MonoBehaviour
 {
     //该鱼在食物链中的等级
     public string Rank;
@@ -10,6 +10,7 @@ public class AI : MonoBehaviour
     public float idleSpeed = 1f;
     public float followSpeed = 1.5f;
     public float angleSpeed = 5f;
+    //闲逛时换方向的时间间隔
     public float maxDirectionChangeTime = 5f;
     //进入检测范围的半径
     [Range(1,50)]
@@ -23,6 +24,7 @@ public class AI : MonoBehaviour
     bool isFollowing = false;
     //要跟随的目标
     GameObject _target = null;
+    string _rankTag;
     float squareNeighborRadius;
     float squareAvoidanceRadius;
     public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
@@ -31,6 +33,7 @@ public class AI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _rankTag = gameObject.tag;
         squareNeighborRadius = neighborRadius * neighborRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
         StartCoroutine(ChangeDirection());
@@ -71,13 +74,12 @@ public class AI : MonoBehaviour
     }
 
 
-    void Follow(Vector3 targetPos, Vector3 avoidanceMove)
+    public void Follow(Vector3 targetPos, Vector3 avoidanceMove)
     {
         direction = targetPos - transform.position;
         Turn();
         //Move(followSpeed);
         transform.position += followSpeed * (new Vector3(direction.x, direction.y, 0) + new Vector3(avoidanceMove.x, avoidanceMove.y, 0)).normalized * Time.deltaTime;
-        //transform.position += followSpeed * new Vector3(avoidanceMove.x, avoidanceMove.y, 0).normalized * Time.deltaTime;
     }
 
 
@@ -107,7 +109,7 @@ public class AI : MonoBehaviour
         transform.position += speed * new Vector3(direction.x, direction.y, 0).normalized * Time.deltaTime;
     }
 
-
+    //计算维持距离需要的向量
     public Vector2 CalculateMove(List<Transform> context)
     {
         if (context.Count == 0)
@@ -140,7 +142,7 @@ public class AI : MonoBehaviour
     List<Transform> GetNearbyObjects()
     {
         List<Transform> context = new List<Transform>();
-        Collider[] colliders = Physics.OverlapSphere(transform.position, neighborRadius);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, neighborRadius, 1 << LayerMask.NameToLayer("Default"));
         bool isExistingTarget = false;
         foreach (Collider c in colliders)
         {
@@ -174,6 +176,24 @@ public class AI : MonoBehaviour
             direction = new Vector3(Random.Range(-1, 2), Random.Range(-1, 2), 0);
         }
         StartCoroutine(ChangeDirection());
+    }
+
+
+    public void OnTriggerEnter(Collider other)
+    {
+        //Debug.Log("Touched");
+        if (other.gameObject.tag == "PlayerFlock" || other.gameObject.tag.CompareTo(_rankTag) < 0)
+        {
+            if (other.gameObject.tag == "PlayerFlock")
+            {
+                //关闭之前初始化
+                var _flockAI = other.gameObject.GetComponent<FlockAI>();
+                _flockAI.isInFlock = false;
+                other.gameObject.layer = LayerMask.NameToLayer("Unflocked");
+                FlockManager.Instance.Flocks.Remove(other.transform);
+            }
+            other.gameObject.GetComponent<RecycleGameobject>().Shutdown();            
+        }
     }
 
 
