@@ -42,8 +42,11 @@ public class FlockManager : MonoBehaviour
     {
         flockCenter = CalculateCenter();
         mousePos = GetMousePosition();
-        flockRotation = Flocks[0].rotation;
-        Debug.Log(Flocks[0]);
+        if (Flocks.Count != 0)
+        {
+            flockRotation = Flocks[0].rotation;
+        }
+        
     }
 
 
@@ -52,13 +55,14 @@ public class FlockManager : MonoBehaviour
         Flocks.Add(FlockPrefab.transform);
         FlockPrefab.layer = 0;
 
-        flockDirection = Vector3.zero;
+        flockDirection = new Vector3(1,0,0);
         flockRotation = FlockPrefab.transform.rotation;
     }
 
     //计算鱼群中心坐标
     public Vector3 CalculateCenter()
     {
+        var centerBefore = flockCenter;
         Vector3 center = Vector3.zero;
         if (Flocks.Count != 0)
         {
@@ -67,6 +71,10 @@ public class FlockManager : MonoBehaviour
                 center += item.position;
             }
             center /= Flocks.Count;
+        }
+        else
+        {
+            center = centerBefore;
         }
 
         return center;
@@ -92,7 +100,7 @@ public class FlockManager : MonoBehaviour
     //每点击一次，刷新一次方向
     public Vector3 GetDirection()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             flockDirection = mousePos - flockCenter;
         }

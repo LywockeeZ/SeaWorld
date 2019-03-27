@@ -65,7 +65,7 @@ public class FlockAI : MonoBehaviour
     {
         if (isInFlock)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
                 isRotating = true;
                 Direction = FlockManager.Instance.GetDirection();

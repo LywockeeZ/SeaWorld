@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour
     public float neighborRadius = 3f;
     [Range(0f, 1f)]
     public float avoidanceRadiusMultiplier = 0.5f;
+    public ParticleSystem biteParticle;
 
     //AI的运动方向
     Vector3 direction = new Vector3(1,0,0);
@@ -186,12 +187,17 @@ public class EnemyAI : MonoBehaviour
         {
             if (other.gameObject.tag == "PlayerFlock")
             {
+                if (other.gameObject.layer == 0)
+                {
+                    CameraController.Instance.CamShake();
+                }
                 //关闭之前初始化
                 var _flockAI = other.gameObject.GetComponent<FlockAI>();
                 _flockAI.isInFlock = false;
                 other.gameObject.layer = LayerMask.NameToLayer("Unflocked");
                 FlockManager.Instance.Flocks.Remove(other.transform);
             }
+            biteParticle.Play();
             other.gameObject.GetComponent<RecycleGameobject>().Shutdown();            
         }
     }
