@@ -80,7 +80,7 @@ public class EnemyAI : MonoBehaviour
         direction = targetPos - transform.position;
         Turn();
         //Move(followSpeed);
-        transform.position += followSpeed * (new Vector3(direction.x, direction.y, 0) + new Vector3(avoidanceMove.x, avoidanceMove.y, 0)).normalized * Time.deltaTime;
+        transform.position += (followSpeed) * (new Vector3(direction.x, direction.y, 0) + new Vector3(avoidanceMove.x, avoidanceMove.y, 0)).normalized * Time.deltaTime;
     }
 
 

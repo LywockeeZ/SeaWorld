@@ -7,21 +7,33 @@ public class Generator : MonoBehaviour
     public float delay = 1f;
     public bool active = false;
     public GameObject[] prefabs;
-    int count = 0;
-    [Range(10, 500)]
-    public int startingCount = 250;
-    const float AgentDensity = 0.08f;//密度
-    [Range(0, 500)]
-    public int maxCount = 20;
-    // Start is called before the first frame update
+    //[Range(0, 500)]
+    //public int maxCount = 20;
+    //int count = 0;                  //生成的总数
+    //public int Count { get { return count; } set { count = value; } }
+    public float GenerateRadius = 8f;
+
+
+    protected static Generator _instance;
+    public static Generator Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<Generator>();
+                if (_instance == null)
+                {
+                    GameObject obj = new GameObject();
+                    _instance = obj.AddComponent<Generator>();
+                }
+            }
+            return _instance;
+        }
+    }
     void Start()
     {
-        //for (count = 0; count < startingCount; count++)
-        //{
-        //    GameObjectUtil.Instantiate(prefabs[Random.Range(0, prefabs.Length)],
-        //        Random.insideUnitCircle * startingCount * AgentDensity);
 
-        //}
         StartCoroutine(MyGenerator());
     }
      
@@ -30,16 +42,26 @@ public class Generator : MonoBehaviour
         yield return new WaitForSeconds(delay);
         if (active)
         {
-            if (count < maxCount)
-            {
                 var newTransfrom = transform;
-                //通过游戏对象管理器实例化对象，使对象生成可控
-                GameObjectUtil.Instantiate(prefabs[Random.Range(0, prefabs.Length)], newTransfrom.position );
-                count++;
+            //通过游戏对象管理器实例化对象，使对象生成可控
+            if (GameManager.Instance.IncreaseSpeed <= 2)
+            {
+                GameObjectUtil.Instantiate(prefabs[Random.Range(0, 2)], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);
             }
+            else
+            if ((GameManager.Instance.IncreaseSpeed > 2)&&(GameManager.Instance.IncreaseSpeed <= 4))
+            {
+                GameObjectUtil.Instantiate(prefabs[Random.Range(0, 3)], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);
+            }
+            else
+            {
+                GameObjectUtil.Instantiate(prefabs[Random.Range(0, 4)], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);
+            }
+                ; 
             
         }
 
         StartCoroutine(MyGenerator());
     }
+
 }

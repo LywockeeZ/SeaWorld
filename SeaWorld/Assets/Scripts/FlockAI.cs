@@ -45,13 +45,13 @@ public class FlockAI : MonoBehaviour
     {
         //IdleTurn();
         Turn();
-        Move(idleSpeed);
+        Move(idleSpeed );
     }
 
     public void FlockMove()
     {
         Turn();
-        Move(FlockManager.Instance.moveSpeed);
+        Move(FlockManager.Instance.moveSpeed + GameManager.Instance.IncreaseSpeed);
     }
 
 
@@ -98,25 +98,26 @@ public class FlockAI : MonoBehaviour
     }
 
 
-    public void IdleTurn()
-    {
-        Vector3 _direction = new Vector3(Direction.x, Direction.y, 0);
-        isRotating = true;
+    //public void IdleTurn()
+    //{
+    //    Vector3 _direction = new Vector3(Direction.x, Direction.y, 0);
+    //    isRotating = true;
 
-        if (isRotating)
-        {
-            //计算出要旋转到目标方向的矩阵
-            if (_direction.magnitude != 0)
-            {
-                Quaternion rotate = Quaternion.LookRotation(_direction, Vector3.up);
-                transform.localRotation = Quaternion.Slerp(transform.localRotation, rotate, angleSpeed * Time.deltaTime);
-            }
-            if (Vector3.Angle(_direction, transform.forward) < 0.01f)
-            {
-                isRotating = false;
-            }
-        }
-    }
+    //    if (isRotating)
+    //    {
+    //        //计算出要旋转到目标方向的矩阵
+    //        if (_direction.magnitude != 0)
+    //        {
+    //            Quaternion.LookRotation()
+    //            Quaternion rotate = Quaternion.LookRotation(_direction, Vector3.up);
+    //            transform.rotation = Quaternion.Slerp(transform.localRotation, rotate, angleSpeed * Time.deltaTime);
+    //        }
+    //        if (Vector3.Angle(_direction, transform.forward) < 0.01f)
+    //        {
+    //            isRotating = false;
+    //        }
+    //    }
+    //}
 
 
     public void CheckAround()
@@ -136,6 +137,8 @@ public class FlockAI : MonoBehaviour
                 _flockAI.Direction = FlockManager.Instance.flockDirection;
                 c.transform.rotation = FlockManager.Instance.flockRotation;
                 FlockManager.Instance.Flocks.Add(c.transform);
+                CameraController.Instance.camAnimator.SetTrigger("CamZoom");
+                GameManager.Instance.scores += 30;
             }
         }
     }

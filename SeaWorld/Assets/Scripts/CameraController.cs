@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
     public float moveSpeed = 1f;
     public float shakePower;
     public CamShake _camShake;
+    public Animator camAnimator;
     Vector3 targetPos;
 
     protected static CameraController _instance;
@@ -48,7 +49,7 @@ public class CameraController : MonoBehaviour
         }
         transform.position = Vector3.Slerp(transform.position,
                                            new Vector3(targetPos.x, targetPos.y, CamDistance), 
-                                           moveSpeed * Time.deltaTime);
+                                           (moveSpeed + GameManager.Instance.IncreaseSpeed) * Time.deltaTime);
     }
 
     //通过CamShake脚本开放的启动函数开启震动

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TigerSharkAttackMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: TigerShark
+    m_Weight: 0
+  - m_Path: TigerSharkRig
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso
+    m_Weight: 1
+  - m_Path: TigerSharkRig/ORG-torso/ORG-fin01.L
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-fin01.R
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-neck
+    m_Weight: 1
+  - m_Path: TigerSharkRig/ORG-torso/ORG-neck/ORG_head
+    m_Weight: 1
+  - m_Path: TigerSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+    m_Weight: 1
+  - m_Path: TigerSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+    m_Weight: 1
+  - m_Path: TigerSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+    m_Weight: 1
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+    m_Weight: 0
+  - m_Path: TigerSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+    m_Weight: 0

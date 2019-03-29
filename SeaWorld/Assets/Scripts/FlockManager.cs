@@ -42,6 +42,7 @@ public class FlockManager : MonoBehaviour
     {
         flockCenter = CalculateCenter();
         mousePos = GetMousePosition();
+        
         if (Flocks.Count != 0)
         {
             flockRotation = Flocks[0].rotation;

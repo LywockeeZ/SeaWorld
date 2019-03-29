@@ -1,0 +1,1876 @@
+fileFormatVersion: 2
+guid: 89718698d0f5def4c9c2dc46f0fb3b46
+timeCreated: 1523135814
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ORG-eye.L
+    100002: ORG-eye.R
+    100004: ORG-fin01.L
+    100006: ORG-fin01.R
+    100008: ORG-fin02.L
+    100010: ORG-fin02.R
+    100012: ORG-finBk
+    100014: ORG-finBkUp
+    100016: ORG-finMdBk.L
+    100018: ORG-finMdBk.R
+    100020: ORG-mouth
+    100022: ORG-neck
+    100024: ORG-spine02
+    100026: ORG-spine03
+    100028: ORG-spine04
+    100030: ORG-spine05
+    100032: ORG-tailDn01
+    100034: ORG-tailDn02
+    100036: ORG-tailMd01
+    100038: ORG-tailMd02
+    100040: ORG-tailUp01
+    100042: ORG-tailUp02
+    100044: ORG-tailUp03
+    100046: ORG-torso
+    100048: ORG_head
+    100050: //RootNode
+    100052: WhiteShark
+    100054: WhiteSharkRig
+    400000: ORG-eye.L
+    400002: ORG-eye.R
+    400004: ORG-fin01.L
+    400006: ORG-fin01.R
+    400008: ORG-fin02.L
+    400010: ORG-fin02.R
+    400012: ORG-finBk
+    400014: ORG-finBkUp
+    400016: ORG-finMdBk.L
+    400018: ORG-finMdBk.R
+    400020: ORG-mouth
+    400022: ORG-neck
+    400024: ORG-spine02
+    400026: ORG-spine03
+    400028: ORG-spine04
+    400030: ORG-spine05
+    400032: ORG-tailDn01
+    400034: ORG-tailDn02
+    400036: ORG-tailMd01
+    400038: ORG-tailMd02
+    400040: ORG-tailUp01
+    400042: ORG-tailUp02
+    400044: ORG-tailUp03
+    400046: ORG-torso
+    400048: ORG_head
+    400050: WhiteShark
+    400052: //RootNode
+    400054: WhiteSharkRig
+    4300000: WhiteShark
+    7400000: WhiteSharkRig|attacking
+    7400002: WhiteSharkRig|attacking_noAnticipation
+    7400004: WhiteSharkRig|attacking_shake
+    7400006: WhiteSharkRig|attacking_shake_loop
+    7400008: WhiteSharkRig|attackingFromLeft
+    7400010: WhiteSharkRig|attackingFromRight
+    7400012: WhiteSharkRig|hurtLeft
+    7400014: WhiteSharkRig|hurtRight
+    7400016: WhiteSharkRig|idle
+    7400018: WhiteSharkRig|idle_look_D
+    7400020: WhiteSharkRig|idle_look_L
+    7400022: WhiteSharkRig|idle_look_R
+    7400024: WhiteSharkRig|idle_look_U
+    7400026: WhiteSharkRig|swimming
+    7400028: WhiteSharkRig|swimming_D
+    7400030: WhiteSharkRig|swimming_L
+    7400032: WhiteSharkRig|swimming_R
+    7400034: WhiteSharkRig|swimming_U
+    7400036: WhiteSharkRig|swimmingRoll_L
+    7400038: WhiteSharkRig|swimmingRoll_R
+    9500000: //RootNode
+    13700000: WhiteShark
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: WhiteSharkRig|attacking
+      takeName: WhiteSharkRig|attacking
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.38756856
+        functionName: AttackEvent
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 41a4a0b5459871740b53178f30bb59a9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|attacking_noAnticipation
+      takeName: WhiteSharkRig|attacking_noAnticipation
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|attacking_shake
+      takeName: WhiteSharkRig|attacking_shake
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|attacking_shake_loop
+      takeName: WhiteSharkRig|attacking_shake_loop
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.25228518
+        functionName: AttackSqueeze
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 41a4a0b5459871740b53178f30bb59a9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|attackingFromLeft
+      takeName: WhiteSharkRig|attackingFromLeft
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.39122486
+        functionName: AttackEvent
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 41a4a0b5459871740b53178f30bb59a9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|attackingFromRight
+      takeName: WhiteSharkRig|attackingFromRight
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.4131627
+        functionName: AttackEvent
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 41a4a0b5459871740b53178f30bb59a9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|hurtLeft
+      takeName: WhiteSharkRig|hurtLeft
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|hurtRight
+      takeName: WhiteSharkRig|hurtRight
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|idle
+      takeName: WhiteSharkRig|idle
+      firstFrame: 0
+      lastFrame: 56
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.58104736
+        functionName: DoIdle
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 41a4a0b5459871740b53178f30bb59a9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|idle_look_D
+      takeName: WhiteSharkRig|idle_look_D
+      firstFrame: 0
+      lastFrame: 168
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|idle_look_L
+      takeName: WhiteSharkRig|idle_look_L
+      firstFrame: 0
+      lastFrame: 112
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|idle_look_R
+      takeName: WhiteSharkRig|idle_look_R
+      firstFrame: 0
+      lastFrame: 112
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|idle_look_U
+      takeName: WhiteSharkRig|idle_look_U
+      firstFrame: 0
+      lastFrame: 168
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|swimming
+      takeName: WhiteSharkRig|swimming
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|swimming_D
+      takeName: WhiteSharkRig|swimming_D
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|swimming_L
+      takeName: WhiteSharkRig|swimming_L
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|swimming_R
+      takeName: WhiteSharkRig|swimming_R
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|swimming_U
+      takeName: WhiteSharkRig|swimming_U
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|swimmingRoll_L
+      takeName: WhiteSharkRig|swimmingRoll_L
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WhiteSharkRig|swimmingRoll_R
+      takeName: WhiteSharkRig|swimmingRoll_R
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: WhiteShark
+        weight: 1
+      - path: WhiteSharkRig
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01
+        weight: 1
+      - path: WhiteSharkRig/ORG-torso/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

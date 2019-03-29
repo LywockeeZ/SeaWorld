@@ -1,0 +1,1876 @@
+fileFormatVersion: 2
+guid: 8b6f00569976e78458c1453e080ef97d
+timeCreated: 1523148673
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: LeopardShark
+    100004: LeopardSharkRig
+    100006: ORG-eye.L
+    100008: ORG-eye.R
+    100010: ORG-fin01.L
+    100012: ORG-fin01.R
+    100014: ORG-fin02.L
+    100016: ORG-fin02.R
+    100018: ORG-finBk
+    100020: ORG-finBkUp
+    100022: ORG-finMdBk.L
+    100024: ORG-finMdBk.R
+    100026: ORG-mouth
+    100028: ORG-neck
+    100030: ORG-spine02
+    100032: ORG-spine03
+    100034: ORG-spine04
+    100036: ORG-spine05
+    100038: ORG-tailDn01
+    100040: ORG-tailDn02
+    100042: ORG-tailMd01
+    100044: ORG-tailMd02
+    100046: ORG-tailUp01
+    100048: ORG-tailUp02
+    100050: ORG-tailUp03
+    100052: ORG-torso
+    100054: ORG_head
+    400000: //RootNode
+    400002: LeopardShark
+    400004: LeopardSharkRig
+    400006: ORG-eye.L
+    400008: ORG-eye.R
+    400010: ORG-fin01.L
+    400012: ORG-fin01.R
+    400014: ORG-fin02.L
+    400016: ORG-fin02.R
+    400018: ORG-finBk
+    400020: ORG-finBkUp
+    400022: ORG-finMdBk.L
+    400024: ORG-finMdBk.R
+    400026: ORG-mouth
+    400028: ORG-neck
+    400030: ORG-spine02
+    400032: ORG-spine03
+    400034: ORG-spine04
+    400036: ORG-spine05
+    400038: ORG-tailDn01
+    400040: ORG-tailDn02
+    400042: ORG-tailMd01
+    400044: ORG-tailMd02
+    400046: ORG-tailUp01
+    400048: ORG-tailUp02
+    400050: ORG-tailUp03
+    400052: ORG-torso
+    400054: ORG_head
+    4300000: LeopardShark
+    7400000: LeopardSharkRig|attacking
+    7400002: LeopardSharkRig|attacking_noAnticipation
+    7400004: LeopardSharkRig|attacking_shake
+    7400006: LeopardSharkRig|attacking_shake_loop
+    7400008: LeopardSharkRig|attackingFromLeft
+    7400010: LeopardSharkRig|attackingFromRight
+    7400012: LeopardSharkRig|hurtLeft
+    7400014: LeopardSharkRig|hurtRight
+    7400016: LeopardSharkRig|idle
+    7400018: LeopardSharkRig|idle_look_D
+    7400020: LeopardSharkRig|idle_look_L
+    7400022: LeopardSharkRig|idle_look_R
+    7400024: LeopardSharkRig|idle_look_U
+    7400026: LeopardSharkRig|swimming
+    7400028: LeopardSharkRig|swimming_D
+    7400030: LeopardSharkRig|swimming_L
+    7400032: LeopardSharkRig|swimming_R
+    7400034: LeopardSharkRig|swimming_U
+    7400036: LeopardSharkRig|swimmingRoll_L
+    7400038: LeopardSharkRig|swimmingRoll_R
+    9500000: //RootNode
+    13700000: LeopardShark
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: LeopardSharkRig|attacking
+      takeName: LeopardSharkRig|attacking
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.41055045
+        functionName: AttackEvent
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 41a4a0b5459871740b53178f30bb59a9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|attacking_noAnticipation
+      takeName: LeopardSharkRig|attacking_noAnticipation
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|attacking_shake
+      takeName: LeopardSharkRig|attacking_shake
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|attacking_shake_loop
+      takeName: LeopardSharkRig|attacking_shake_loop
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.2867669
+        functionName: AttackSqueeze
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 41a4a0b5459871740b53178f30bb59a9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|attackingFromLeft
+      takeName: LeopardSharkRig|attackingFromLeft
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.41055045
+        functionName: AttackEvent
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 41a4a0b5459871740b53178f30bb59a9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|attackingFromRight
+      takeName: LeopardSharkRig|attackingFromRight
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.41055045
+        functionName: AttackEvent
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 41a4a0b5459871740b53178f30bb59a9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|hurtLeft
+      takeName: LeopardSharkRig|hurtLeft
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|hurtRight
+      takeName: LeopardSharkRig|hurtRight
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|idle
+      takeName: LeopardSharkRig|idle
+      firstFrame: 0
+      lastFrame: 56
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.51122195
+        functionName: DoIdle
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 41a4a0b5459871740b53178f30bb59a9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|idle_look_D
+      takeName: LeopardSharkRig|idle_look_D
+      firstFrame: 0
+      lastFrame: 168
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|idle_look_L
+      takeName: LeopardSharkRig|idle_look_L
+      firstFrame: 0
+      lastFrame: 112
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|idle_look_R
+      takeName: LeopardSharkRig|idle_look_R
+      firstFrame: 0
+      lastFrame: 112
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|idle_look_U
+      takeName: LeopardSharkRig|idle_look_U
+      firstFrame: 0
+      lastFrame: 168
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|swimming
+      takeName: LeopardSharkRig|swimming
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|swimming_D
+      takeName: LeopardSharkRig|swimming_D
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|swimming_L
+      takeName: LeopardSharkRig|swimming_L
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|swimming_R
+      takeName: LeopardSharkRig|swimming_R
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|swimming_U
+      takeName: LeopardSharkRig|swimming_U
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|swimmingRoll_L
+      takeName: LeopardSharkRig|swimmingRoll_L
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeopardSharkRig|swimmingRoll_R
+      takeName: LeopardSharkRig|swimmingRoll_R
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LeopardShark
+        weight: 1
+      - path: LeopardSharkRig
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.L/ORG-fin02.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-fin01.R/ORG-fin02.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-eye.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-neck/ORG_head/ORG-mouth
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.L
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-finMdBk.R
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBk
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-finBkUp
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailDn01/ORG-tailDn02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-spine03/ORG-spine04/ORG-spine05/ORG-tailUp01/ORG-tailUp02/ORG-tailUp03
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01
+        weight: 1
+      - path: LeopardSharkRig/ORG-torso/ORG-spine02/ORG-tailMd01/ORG-tailMd02
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
