@@ -79,8 +79,8 @@ public class EnemyAI : MonoBehaviour
     {
         direction = targetPos - transform.position;
         Turn();
-        //Move(followSpeed);
-        transform.position += (followSpeed) * (new Vector3(direction.x, direction.y, 0) + new Vector3(avoidanceMove.x, avoidanceMove.y, 0)).normalized * Time.deltaTime;
+        //Move(followSpeed);+ new Vector3(avoidanceMove.x, avoidanceMove.y, 0))
+        transform.position += (followSpeed) * (new Vector3(direction.x, direction.y, 0) .normalized * Time.deltaTime);
     }
 
 
@@ -196,9 +196,17 @@ public class EnemyAI : MonoBehaviour
                 _flockAI.isInFlock = false;
                 other.gameObject.layer = LayerMask.NameToLayer("Unflocked");
                 FlockManager.Instance.Flocks.Remove(other.transform);
+                biteParticle.Play();
+                other.gameObject.GetComponent<RecycleGameobject>().Shutdown();
             }
-            biteParticle.Play();
-            other.gameObject.GetComponent<RecycleGameobject>().Shutdown();            
+            else
+            if (other.isTrigger == true)
+            {
+                //判断一下是否碰到了身体
+                biteParticle.Play();
+                other.gameObject.GetComponent<RecycleGameobject>().Shutdown();
+            }
+                        
         }
     }
 

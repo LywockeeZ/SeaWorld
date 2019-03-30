@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 4768126103479514105}
   - component: {fileID: 3682712288791767876}
   - component: {fileID: 2075663670034852265}
+  - component: {fileID: 3735249895769522700}
   m_Layer: 11
   m_Name: Fish
   m_TagString: PlayerFlock
@@ -267,6 +268,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDistance: 45
   canShutDown: 1
+--- !u!54 &3735249895769522700
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969556624318912696}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 0
 --- !u!1 &7969556624361790643
 GameObject:
   m_ObjectHideFlags: 0
