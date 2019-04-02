@@ -219,6 +219,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     //关闭之前初始化
                     CameraController.Instance.CamShake();
+                    CameraController.Instance.CamZoomDecreaseStart();
                     var _flockAI = other.gameObject.GetComponent<FlockAI>();
                     _flockAI.isInFlock = false;
                     other.gameObject.layer = LayerMask.NameToLayer("Unflocked");

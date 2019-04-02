@@ -211,7 +211,8 @@ public class FlockAI : MonoBehaviour
                 c.transform.rotation = FlockManager.Instance.flockRotation;
                 //使他的位置沿半径方向缩回0.1
                 //c.transform.position -= (c.transform.position - FlockManager.Instance.flockCenter).normalized * (Vector3.Distance(transform.position, FlockManager.Instance.flockCenter) - 0.95f);
-                CameraController.Instance.camAnimator.SetTrigger("CamZoom");
+                //CameraController.Instance.camAnimator.SetTrigger("CamZoom");
+                CameraController.Instance.CamZoomIncreaseStart();
                 _flockAI.UIanimator.SetTrigger("Flocked");
                 GameManager.Instance.scores += FlockManager.Instance.Flocks.Count;
             }

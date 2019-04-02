@@ -12,6 +12,8 @@ public class CameraController : MonoBehaviour
     public CamShake _camShake;
     public Animator camAnimator;
     Vector3 targetPos;
+    float viewBefore;
+    float viewAfter;
 
     protected static CameraController _instance;
     public static CameraController Instance
@@ -39,7 +41,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-
+        
 
         targetPos = FlockManager.Instance.flockCenter;
         
@@ -49,8 +51,49 @@ public class CameraController : MonoBehaviour
     }
 
     //通过CamShake脚本开放的启动函数开启震动
-    public void CamShake ()
+    public void CamShake()
     {
         _camShake.Shake(shakePower);
+    }
+
+    IEnumerator  CamZoomIncrease()
+    {
+        yield return null;
+        viewAfter += 0.05F;
+        Camera.main.fieldOfView = viewAfter;
+        if (viewAfter - viewBefore >= 1f)
+        {
+            StopCoroutine(CamZoomIncrease());
+        }
+        else StartCoroutine(CamZoomIncrease());
+        
+    }
+
+    IEnumerator CamZoomDecrease()
+    {
+        yield return null;
+        viewAfter -= 0.05F;
+        Camera.main.fieldOfView = viewAfter;
+        if (viewBefore - viewAfter >= 1f)
+        {
+            StopCoroutine(CamZoomDecrease());
+        }
+        else StartCoroutine(CamZoomDecrease());
+       
+    }
+
+    public void CamZoomIncreaseStart()
+    {
+        viewBefore = Camera.main.fieldOfView;
+        viewAfter = viewBefore;
+        StartCoroutine(CamZoomIncrease());
+    }
+
+
+    public void CamZoomDecreaseStart()
+    {
+        viewBefore = Camera.main.fieldOfView;
+        viewAfter = viewBefore;
+        StartCoroutine(CamZoomDecrease());
     }
 }
