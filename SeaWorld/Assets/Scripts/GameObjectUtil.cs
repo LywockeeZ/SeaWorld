@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameObjectUtil
 {
+    public static List<ObjectPool> poolList = new List<ObjectPool>(); //使外界能够获取所有的对象池
     private static Dictionary<RecycleGameobject, ObjectPool> pools = new Dictionary<RecycleGameobject, ObjectPool>();
     public static GameObject Instantiate(GameObject prefab , Vector3 pos)
     {
@@ -50,6 +51,7 @@ public class GameObjectUtil
             //如果所查询的对象池不存在则创建一个新的
             var poolContainer = new GameObject(reference.gameObject.name + "ObjectPool");
             pool = poolContainer.AddComponent<ObjectPool>();
+            poolList.Add(pool);
             pool.prefab = reference;
             pools.Add(reference, pool);
         }

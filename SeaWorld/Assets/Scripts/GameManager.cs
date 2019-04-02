@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public int scores;
     public Generator generator;
     public Text scoreText;
+    public int gameLevel = 1;
     float increaseSpeed = 0f;
     public float IncreaseSpeed { get { return increaseSpeed; } set { increaseSpeed = value; } }
 
@@ -69,4 +70,5 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         StartCoroutine(ChangeSpeed());
     }
+
 }

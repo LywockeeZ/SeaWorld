@@ -5,14 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class FlockAgent : MonoBehaviour
 {
-    Flock agentFlock;
+    protected Flock agentFlock;
     public Flock AgentFlock { get { return agentFlock; } }
 
-    Collider agentCollider;
+    protected Collider agentCollider;
     public Collider AgentCollider { get { return agentCollider; } }
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         agentCollider = GetComponent<Collider>();
     }

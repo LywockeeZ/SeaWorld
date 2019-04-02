@@ -1,0 +1,58 @@
+Release Notes:
+
+v1.7:
+- Fixes:
+	- Removed the option to disable the 2.5D water when a GPU based water object is created.
+	- Fixed a issue with the third wave in the GPU based water ambient waves not working.
+	- Removed absolite methods in unity 2018.3 and newer.
+
+- Improvements:
+	- Improved the documentation.
+
+v1.6:
+- Fixes:
+	- Replaced amplitude fade distance in the GPU based water with amplitude fade start and end point position.
+	- Fixed a bug that generated an error when a dynamic obstruction object was destroyed.
+	- Fixed a bug that generated an error when a floating object was destroyed.
+	- Fixed a bug that generated an error when the editor camera was in isometric mode.
+
+v1.5:
+- New GPU based ripple water.
+	*Dynamic water size with no ripple stretching.
+	*Multiple ways to interact with the Water.
+	*Ambient waves.
+	*Dynamic obstructions.
+	*Texture obstructions.
+	*Create texture obstruction inside Unity.
+	*Rain simulation.
+	*Height animation.
+	*Large water areas.
+
+- Other new features:
+	- Performance improvements.
+	- Support for prefabs.
+	- Collider layer mask.
+	- Partial support for ray cast based character controllers.
+	- On exit player ripple, particle system and sound effect.
+	- Manually generate ripples by calling GenerateRippleAtPosition().
+	- Added support for Capsule Collider 2D.
+
+v1.4:
+-New in Water 2D Tool 1.2:
+	- Added 2.5D water option.
+	- Added water flow.
+	- Added per object particle system instantiation option.
+	- Improved the object interaction with the water waves.
+
+	- Added compatibility with newer versions of unity.
+	- Fixed a small bug.
+
+v1.3:
+	- An error is no longer generated in Unity 5.4.
+	- Added a couple of new features. 
+
+
+v1.1:
+	- Added support for 3D colliders.
+	- Code namespace.
+	- Added new features.

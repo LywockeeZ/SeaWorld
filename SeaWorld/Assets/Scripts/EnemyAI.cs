@@ -23,9 +23,11 @@ public class EnemyAI : MonoBehaviour
     Vector3 direction = new Vector3(1,0,0);
     bool isRotating = false;
     bool isFollowing = false;
+    bool isEscaping = false;
     //要跟随的目标
     GameObject _target = null;
-    string _rankTag;
+    string myRankTag;
+    RecycleGameobject recycle;
     float squareNeighborRadius;
     float squareAvoidanceRadius;
     public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
@@ -34,7 +36,8 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _rankTag = gameObject.tag;
+        recycle = GetComponent<RecycleGameobject>();
+        myRankTag = gameObject.tag;
         squareNeighborRadius = neighborRadius * neighborRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
         StartCoroutine(ChangeDirection());
@@ -49,7 +52,8 @@ public class EnemyAI : MonoBehaviour
         List<Transform> context = GetNearbyObjects();
         if (context != null)
         {
-             move = CalculateMove(context);
+            //关闭了avoidance的计算
+            move = Vector2.zero;//CalculateMove(context);
         }
         
         if (_target != null)
@@ -60,21 +64,30 @@ public class EnemyAI : MonoBehaviour
         else
         {
             isFollowing = false;
-            Idle();
+            Debug.Log(isEscaping);
+            if (isEscaping)
+            {
+                
+                Idle(followSpeed);
+            }
+            else
+            {
+                Idle(idleSpeed);
+            }      
         }
 
 
     }
 
 
-    void Idle()
+    void Idle(float Speed)
     {
         Turn();
-        Move(idleSpeed);
+        Move(Speed);
         
     }
 
-
+    //暂时不使用avoidanceMove
     public void Follow(Vector3 targetPos, Vector3 avoidanceMove)
     {
         direction = targetPos - transform.position;
@@ -145,6 +158,7 @@ public class EnemyAI : MonoBehaviour
         List<Transform> context = new List<Transform>();
         Collider[] colliders = Physics.OverlapSphere(transform.position, neighborRadius, 1 << LayerMask.NameToLayer("Default"));
         bool isExistingTarget = false;
+        bool isExistingEscapeTarget = false;
         foreach (Collider c in colliders)
         {
             //获取同类鱼
@@ -153,15 +167,29 @@ public class EnemyAI : MonoBehaviour
                 context.Add(c.transform);
             }
             //获取要跟随的鱼
-            if (c.gameObject.tag == "PlayerFlock")
+            if (c.gameObject.tag == "Player")
             {
-                isExistingTarget = true;
-                _target = c.gameObject;
+                var rank = FlockManager.Instance.controllingFlockRank;
+                if (Rank.CompareTo(rank) > 0)
+                {
+                    isExistingTarget = true;
+                    _target = c.gameObject;
+                }
+                else
+                {
+                    isExistingEscapeTarget = true;
+                    Escape(c);
+                }
+
             }
         }
         if (!isExistingTarget)
         {
             _target = null;
+        }
+        if (!isExistingEscapeTarget)
+        {
+            isEscaping = false;
         }
         return context;
     }
@@ -172,7 +200,7 @@ public class EnemyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(0, maxDirectionChangeTime + 1));
         //只有在闲逛状态下才随机改变方向
-        if (!isFollowing)
+        if (!isFollowing || !isEscaping)
         {
             direction = new Vector3(Random.Range(-1, 2), Random.Range(-1, 2), 0);
         }
@@ -182,33 +210,42 @@ public class EnemyAI : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("Touched");
-        if (other.gameObject.tag == "PlayerFlock" || other.gameObject.tag.CompareTo(_rankTag) < 0)
+        //先检查是不是玩家，再检查是否为鱼群中的鱼
+        if (other.tag == "Player")
         {
-            if (other.gameObject.tag == "PlayerFlock")
+            if (FlockManager.Instance.controllingFlockRank.CompareTo(myRankTag) < 0)
             {
                 if (other.gameObject.layer == 0)
                 {
+                    //关闭之前初始化
                     CameraController.Instance.CamShake();
+                    var _flockAI = other.gameObject.GetComponent<FlockAI>();
+                    _flockAI.isInFlock = false;
+                    other.gameObject.layer = LayerMask.NameToLayer("Unflocked");
+                    FlockManager.Instance.Flocks.Remove(other.transform);
                 }
-                //关闭之前初始化
-                var _flockAI = other.gameObject.GetComponent<FlockAI>();
-                _flockAI.isInFlock = false;
-                other.gameObject.layer = LayerMask.NameToLayer("Unflocked");
-                FlockManager.Instance.Flocks.Remove(other.transform);
                 biteParticle.Play();
                 other.gameObject.GetComponent<RecycleGameobject>().Shutdown();
             }
-            else
-            if (other.isTrigger == true)
+            
+        }
+        else
+        {
+            if (other.tag.CompareTo(myRankTag) < 0 && other.isTrigger ==false)
             {
-                //判断一下是否碰到了身体
                 biteParticle.Play();
                 other.gameObject.GetComponent<RecycleGameobject>().Shutdown();
             }
-                        
         }
     }
+
+
+    private void Escape(Collider other)
+    {
+        isEscaping = true;
+        direction = transform.position - FlockManager.Instance.flockCenter;
+    }
+
 
 
     private void OnDrawGizmos()

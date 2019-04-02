@@ -11,17 +11,28 @@ public class FlockAI : MonoBehaviour
     public bool isInFlock = false;
     [Range(0, 50)]
     public float neighborRadius = 1f;
+    [Range(0f, 1f)]
+    public float avoidanceRadiusMultiplier = 0.5f;
     public float maxDirectionChangeTime = 5f;
-
+    public ParticleSystem biteParticle;
 
     Vector3 Direction = new Vector3(1, 0, 0);
     bool isRotating = false;
+    List<Transform> flockList;
     float squareNeighborRadius;
+    float squareAvoidanceRadius;
+    public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
+    //cohensionMove需要的变量
+    Vector2 currentVelocity;
+    public float agentSmoothTime = 0.5f;
+    public Animator UIanimator;
 
 
     void Start()
     {
         squareNeighborRadius = neighborRadius * neighborRadius;
+        squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
+        flockList = FlockManager.Instance.Flocks;
         StartCoroutine(ChangeDirection());
     }
 
@@ -34,8 +45,16 @@ public class FlockAI : MonoBehaviour
         }
         else
         {
-            FlockMove();
-            CheckAround();
+            if (CanMove)
+            {
+                FlockMove();
+                if (CheckState())
+                {
+                    CheckAround();
+                }
+            }
+            
+
         }
  
     }
@@ -51,13 +70,23 @@ public class FlockAI : MonoBehaviour
     public void FlockMove()
     {
         Turn();
-        Move(FlockManager.Instance.moveSpeed + GameManager.Instance.IncreaseSpeed);
+        //基本速度+随时间增加的难度速度
+        MoveAddConhesion(FlockManager.Instance.moveSpeed + GameManager.Instance.IncreaseSpeed);
+        
     }
 
 
     public void Move(float speed)
     {
-        transform.position += speed * new Vector3(Direction.x, Direction.y, 0).normalized * Time.deltaTime;
+        Vector3 cohesion = CalculateCohesion();
+        transform.position += (speed) * new Vector3(Direction.x, Direction.y, 0).normalized * Time.deltaTime;
+    }
+
+
+    public void MoveAddConhesion(float speed)
+    {
+        Vector3 cohesion = CalculateCohesion();
+        transform.position += (speed - 4) * new Vector3(Direction.x, Direction.y, 0).normalized * Time.deltaTime + 0.05f * cohesion;
     }
 
 
@@ -69,14 +98,9 @@ public class FlockAI : MonoBehaviour
             {
                 isRotating = true;
                 Direction = FlockManager.Instance.GetDirection();
-                //Direction = FlockManager.Instance.GetMousePosition() - FlockManager.Instance.flockCenter;
-                //Direction = FlockManager.Instance.GetMousePosition() - transform.position;
             }
         }
-        else
-        {
-            isRotating = true;
-        }
+        
  
         Vector3 _direction = new Vector3(Direction.x, Direction.y, 0);
         
@@ -120,6 +144,54 @@ public class FlockAI : MonoBehaviour
     //}
 
 
+    public Vector2 CalculateCohesion()
+    {
+        //如果没有邻居，就不用调整
+        if (flockList.Count == 0)
+        {
+            return Vector2.zero;
+        }
+
+        Vector2 cohesionMove = FlockManager.Instance.flockCenter;
+
+        //对当前位置计算一下偏差
+        cohesionMove -= (Vector2)transform.position;
+        cohesionMove = Vector2.SmoothDamp(transform.forward, cohesionMove, ref currentVelocity, agentSmoothTime);
+        return cohesionMove;
+    }
+
+
+    //public Vector2 CalculateAvoidance()
+    //{
+    //    if (flockList.Count == 0)
+    //    {
+    //        return Vector2.zero;
+    //    }
+
+    //    //若需要分离，则执行分离操作
+    //    Vector2 avoidanceMove = Vector2.zero;
+    //    //需要分离的邻居的个数
+    //    int nAvoid = 0;
+    //    foreach (Transform item in flockList)
+    //    {
+    //        if (Vector2.SqrMagnitude(item.position - transform.position) < SquareAvoidanceRadius)
+    //        {
+    //            nAvoid++;
+    //            avoidanceMove += (Vector2)(transform.position - item.position);
+    //            //Debug.Log(avoidanceMove);
+    //            //avoidanceMove = Vector2.SmoothDamp(agent.transform.forward, avoidanceMove, ref currentVelocity, agentSmoothTime);
+    //            //avoidanceMove = Vector2.Lerp(agent.transform.forward, avoidanceMove, agentSmoothTime);
+    //        }
+
+    //    }
+    //    if (nAvoid > 0)
+    //    {
+    //        avoidanceMove /= nAvoid;
+    //    }
+    //    return avoidanceMove;
+    //}
+
+
     public void CheckAround()
     {
         //List<Transform> context = new List<Transform>();
@@ -127,22 +199,34 @@ public class FlockAI : MonoBehaviour
         foreach (Collider c in colliders)
         {
             
-            //如果在未聚集的曾，则改为已聚集的层，防止重复探测
+            //如果在未聚集的层，则改为已聚集的层，防止重复探测
             if (c.gameObject.layer == LayerMask.NameToLayer("Unflocked"))
             {
+                FlockManager.Instance.Flocks.Add(c.transform);
                 c.gameObject.layer = 0;
                 var _flockAI = c.gameObject.GetComponent<FlockAI>();               
                 _flockAI.isInFlock = true;
                 //使其与鱼群方向相同
                 _flockAI.Direction = FlockManager.Instance.flockDirection;
                 c.transform.rotation = FlockManager.Instance.flockRotation;
-                FlockManager.Instance.Flocks.Add(c.transform);
+                //使他的位置沿半径方向缩回0.1
+                //c.transform.position -= (c.transform.position - FlockManager.Instance.flockCenter).normalized * (Vector3.Distance(transform.position, FlockManager.Instance.flockCenter) - 0.95f);
                 CameraController.Instance.camAnimator.SetTrigger("CamZoom");
-                GameManager.Instance.scores += 30;
+                _flockAI.UIanimator.SetTrigger("Flocked");
+                GameManager.Instance.scores += FlockManager.Instance.Flocks.Count;
             }
         }
     }
 
+
+    public bool CheckState()
+    {
+        if (true)
+        {
+            
+        }
+        return true;
+    }
 
 
     //每间隔几秒换一个方向
@@ -152,9 +236,21 @@ public class FlockAI : MonoBehaviour
         //只有在闲逛状态下才随机改变方向
         if (!isInFlock)
         {
+            isRotating = true;
             Direction = new Vector3(Random.Range(-1, 2), Random.Range(-1, 2), 0);
         }
         StartCoroutine(ChangeDirection());
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //吃掉等级小的 && 防止碰到身体触发 && 防止吃自己人
+        if (other.tag.CompareTo(Rank) < 0 && other.isTrigger == false && other.tag != "Player")
+        {
+            biteParticle.Play();
+            other.gameObject.GetComponent<RecycleGameobject>().Shutdown();
+        }
     }
 
 

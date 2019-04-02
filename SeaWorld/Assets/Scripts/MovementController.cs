@@ -68,7 +68,7 @@ public class MovementController : MonoBehaviour
             //如果是正交摄像机用以下代码
             //mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            LayerMask mask = 1 << 10;
+            LayerMask mask = 1 << LayerMask.NameToLayer("Mask");
             RaycastHit hitInfo;          
             if (Physics.Raycast(ray, out hitInfo, 200, mask))
             {

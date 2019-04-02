@@ -7,30 +7,11 @@ public class Generator : MonoBehaviour
     public float delay = 1f;
     public bool active = false;
     public GameObject[] prefabs;
-    //[Range(0, 500)]
-    //public int maxCount = 20;
-    //int count = 0;                  //生成的总数
-    //public int Count { get { return count; } set { count = value; } }
+    public int[] activeCounts;        //激活状态下的个数
     public float GenerateRadius = 8f;
 
+    
 
-    protected static Generator _instance;
-    public static Generator Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType<Generator>();
-                if (_instance == null)
-                {
-                    GameObject obj = new GameObject();
-                    _instance = obj.AddComponent<Generator>();
-                }
-            }
-            return _instance;
-        }
-    }
     void Start()
     {
 
@@ -42,26 +23,83 @@ public class Generator : MonoBehaviour
         yield return new WaitForSeconds(delay);
         if (active)
         {
-                var newTransfrom = transform;
-            //通过游戏对象管理器实例化对象，使对象生成可控
-            if (GameManager.Instance.IncreaseSpeed <= 2)
+            switch (GameManager.Instance.gameLevel)
             {
-                GameObjectUtil.Instantiate(prefabs[Random.Range(0, 2)], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);
+                case 1:InstantiatePrefabs(0,2);
+                    break;
+                case 2:InstantiatePrefabs(0, 3);
+                    break;
+                case 3:InstantiatePrefabs(0, 4);
+                    break;
+                default:InstantiatePrefabs(0,1);
+                    break;
             }
-            else
-            if ((GameManager.Instance.IncreaseSpeed > 2)&&(GameManager.Instance.IncreaseSpeed <= 4))
-            {
-                GameObjectUtil.Instantiate(prefabs[Random.Range(0, 3)], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);
-            }
-            else
-            {
-                GameObjectUtil.Instantiate(prefabs[Random.Range(0, 4)], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);
-            }
-                ; 
-            
+           
         }
 
         StartCoroutine(MyGenerator());
+    }
+
+    //maxIndex用来控制实例化prefabs数组的范围
+    public void InstantiatePrefabs(int initIndex , int maxIndex)
+    {
+        var newTransfrom = transform;
+        for (int index = initIndex; index <= maxIndex; index++)
+        {
+            ObjectPool targetPool = null;
+            if (GameObjectUtil.poolList.Count != 0)
+            {
+                //获得相应的对象池
+                foreach (var item in GameObjectUtil.poolList)
+                {
+                    if (item.gameObject.name == prefabs[index].name + "ObjectPool")
+                    {
+                        targetPool = item;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    
+                }
+                //如果没有，则新建一个对象池然后结束
+                if (targetPool == null)
+                {
+                    GameObjectUtil.Instantiate(prefabs[index], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);
+                    continue;
+                }
+                //如果有对象池，则检查对象池中激活的实例个数
+                int activedCount = 0;
+                foreach (var item in targetPool.poolInstances)
+                {
+                    if (item.gameObject.activeInHierarchy == true)
+                    {
+                        activedCount++;
+                    }
+                }
+                //如果当前激活个数小于目标个数，则激活或者新建
+                if (activedCount < activeCounts[index])
+                {
+                    GameObjectUtil.Instantiate(prefabs[index], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);//通过游戏对象管理器实例化对象，使对象生成可控
+                }
+
+            }
+            else
+            {
+                GameObjectUtil.Instantiate(prefabs[index], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);
+            }
+            
+            
+        }
+        
+        
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, GenerateRadius);
     }
 
 }

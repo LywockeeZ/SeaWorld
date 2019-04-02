@@ -6,7 +6,7 @@ using UnityEngine;
 public class SteeredCohesionBehavior : FilterFlockBehavior
 {
 
-    Vector2 currentVelocity;
+    Vector2 currentVelocity = new Vector2 (1,1);
     public float agentSmoothTime = 0.5f;
 
     public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)

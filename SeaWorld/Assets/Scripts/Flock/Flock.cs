@@ -5,7 +5,7 @@ using UnityEngine;
 public class Flock : MonoBehaviour
 {
     public FlockAgent agentPrefab;
-    List<FlockAgent> agents = new List<FlockAgent>();
+    public List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehaviour behavior;
 
     [Range(10, 500)]
@@ -21,13 +21,13 @@ public class Flock : MonoBehaviour
     [Range(0f, 1f)]
     public float avoidanceRadiusMultiplier = 0.5f;
 
-    float squareMaxSpeed;
-    float squareNeighborRadius;
-    float squareAvoidanceRadius;
+    protected float squareMaxSpeed;
+    protected float squareNeighborRadius;
+    protected float squareAvoidanceRadius;
     public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         squareMaxSpeed = maxSpeed * maxSpeed;
         squareNeighborRadius = neighborRadius * neighborRadius;
@@ -48,7 +48,7 @@ public class Flock : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         foreach (FlockAgent agent in agents)
         {

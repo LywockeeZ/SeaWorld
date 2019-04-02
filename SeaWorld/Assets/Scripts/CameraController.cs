@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
     public float CamDistance;
     public float moveSpeed = 1f;
     public float shakePower;
+    public Vector3 offset;
     public CamShake _camShake;
     public Animator camAnimator;
     Vector3 targetPos;
@@ -39,16 +40,11 @@ public class CameraController : MonoBehaviour
     void Update()
     {
 
-        if (FlockManager.Instance.Flocks.Count != 0)
-        {
-            targetPos = FlockManager.Instance.Flocks[0].position;
-        }
-        else
-        {
-            targetPos = FlockManager.Instance.flockCenter;
-        }
+
+        targetPos = FlockManager.Instance.flockCenter;
+        
         transform.position = Vector3.Slerp(transform.position,
-                                           new Vector3(targetPos.x, targetPos.y, CamDistance), 
+                                           new Vector3(targetPos.x + offset.x, targetPos.y + offset.y, CamDistance), 
                                            (moveSpeed + GameManager.Instance.IncreaseSpeed) * Time.deltaTime);
     }
 

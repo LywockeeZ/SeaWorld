@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     public RecycleGameobject prefab;
-    private List<RecycleGameobject> poolInstances = new List<RecycleGameobject>();
+    public List<RecycleGameobject> poolInstances = new List<RecycleGameobject>();
 
     private RecycleGameobject CreateInstance(Vector3 pos)
     {
