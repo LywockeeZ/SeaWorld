@@ -55,6 +55,7 @@ public class Generator : MonoBehaviour
                     if (item.gameObject.name == prefabs[index].name + "ObjectPool")
                     {
                         targetPool = item;
+                        continue;
                     }
                     else
                     {
@@ -65,7 +66,10 @@ public class Generator : MonoBehaviour
                 //如果没有，则新建一个对象池然后结束
                 if (targetPool == null)
                 {
-                    GameObjectUtil.Instantiate(prefabs[index], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);
+                    if (activeCounts[index] != 0)
+                    {
+                        GameObjectUtil.Instantiate(prefabs[index], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);
+                    }
                     continue;
                 }
                 //如果有对象池，则检查对象池中激活的实例个数
@@ -80,6 +84,7 @@ public class Generator : MonoBehaviour
                 //如果当前激活个数小于目标个数，则激活或者新建
                 if (activedCount < activeCounts[index])
                 {
+                    
                     GameObjectUtil.Instantiate(prefabs[index], newTransfrom.position + (Vector3)Random.insideUnitCircle * GenerateRadius);//通过游戏对象管理器实例化对象，使对象生成可控
                 }
 
@@ -98,7 +103,12 @@ public class Generator : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
+        if (active == false)
+        {
+            Gizmos.color = Color.grey;
+        }
+        else Gizmos.color = Color.green;
+        
         Gizmos.DrawWireSphere(transform.position, GenerateRadius);
     }
 

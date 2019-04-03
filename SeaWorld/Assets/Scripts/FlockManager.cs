@@ -14,6 +14,7 @@ public class FlockManager : MonoBehaviour
     public Vector3 mousePos { get; set; }
     public Vector3 flockDirection { get; set; }
     public Quaternion flockRotation { get; set; }
+    public float shutDownBoundary = 45f;
     public float visualBoundary = 10f;
     public Vector3 visualBoundaryOffset = Vector3.zero;
 
@@ -116,5 +117,6 @@ public class FlockManager : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(flockCenter + visualBoundaryOffset, visualBoundary);
+        Gizmos.DrawWireSphere(flockCenter + visualBoundaryOffset, shutDownBoundary);
     }
 }

@@ -27,7 +27,6 @@ public class EnemyAI : MonoBehaviour
     //要跟随的目标
     GameObject _target = null;
     string myRankTag;
-    RecycleGameobject recycle;
     float squareNeighborRadius;
     float squareAvoidanceRadius;
     public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
@@ -36,7 +35,6 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        recycle = GetComponent<RecycleGameobject>();
         myRankTag = gameObject.tag;
         squareNeighborRadius = neighborRadius * neighborRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
@@ -64,7 +62,6 @@ public class EnemyAI : MonoBehaviour
         else
         {
             isFollowing = false;
-            Debug.Log(isEscaping);
             if (isEscaping)
             {
                 
@@ -93,13 +90,13 @@ public class EnemyAI : MonoBehaviour
         direction = targetPos - transform.position;
         Turn();
         //Move(followSpeed);+ new Vector3(avoidanceMove.x, avoidanceMove.y, 0))
-        transform.position += (followSpeed) * (new Vector3(direction.x, direction.y, 0) .normalized * Time.deltaTime);
+        transform.position += (followSpeed) * (new Vector3(direction.x, direction.y, direction.z) .normalized * Time.deltaTime);
     }
 
 
     void Turn()
     {
-        Vector3 _direction = new Vector3(direction.x, direction.y, 0);
+        Vector3 _direction = new Vector3(direction.x, direction.y, direction.z);
         isRotating = true;
 
         if (isRotating)
@@ -120,7 +117,7 @@ public class EnemyAI : MonoBehaviour
 
     void Move(float speed)
     {
-        transform.position += speed * new Vector3(direction.x, direction.y, 0).normalized * Time.deltaTime;
+        transform.position += speed * new Vector3(direction.x, direction.y, direction.z).normalized * Time.deltaTime;
     }
 
     //计算维持距离需要的向量

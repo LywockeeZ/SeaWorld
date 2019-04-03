@@ -78,7 +78,6 @@ public class FlockAI : MonoBehaviour
 
     public void Move(float speed)
     {
-        Vector3 cohesion = CalculateCohesion();
         transform.position += (speed) * new Vector3(Direction.x, Direction.y, 0).normalized * Time.deltaTime;
     }
 
