@@ -39,23 +39,26 @@ public class FlockAI : MonoBehaviour
 
     void Update()
     {
-        if (!isInFlock)
+        if (CanMove)
         {
-            Idle();
-        }
-        else
-        {
-            if (CanMove)
+            if (!isInFlock)
             {
+                Idle();
+            }
+            else
+            {
+           
                 FlockMove();
                 if (CheckState())
                 {
                     CheckAround();
+                    
                 }
-            }
-            
 
+
+            }
         }
+
  
     }
 

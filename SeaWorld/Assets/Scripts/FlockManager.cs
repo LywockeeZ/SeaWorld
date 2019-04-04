@@ -17,6 +17,7 @@ public class FlockManager : MonoBehaviour
     public float shutDownBoundary = 45f;
     public float visualBoundary = 10f;
     public Vector3 visualBoundaryOffset = Vector3.zero;
+    public GameObject _flockPrefab { get; set; }
 
     protected static FlockManager _instance;
     public static FlockManager Instance
@@ -35,7 +36,12 @@ public class FlockManager : MonoBehaviour
             return _instance;
         }
     }
-    // Start is called before the first frame update
+
+    void Awake()
+    {
+        _flockPrefab = GameObjectUtil.Instantiate(FlockManager.Instance.FlockPrefab, Vector3.zero);
+    }
+
     void Start()
     {
         Init();
@@ -57,11 +63,15 @@ public class FlockManager : MonoBehaviour
 
     public void Init()
     {
-        Flocks.Add(FlockPrefab.transform);
-        FlockPrefab.layer = 0;
+        var _flockAI = _flockPrefab.GetComponent<FlockAI>();
+        Flocks.Add(_flockPrefab.transform);
+        _flockPrefab.layer = 0;
         flockDirection = new Vector3(1,0,0);
-        flockRotation = FlockPrefab.transform.rotation;
-        controllingFlockRank = FlockPrefab.GetComponent<FlockAI>().Rank;
+        flockRotation = _flockPrefab.transform.rotation;
+        controllingFlockRank = _flockAI.Rank;
+        _flockAI.CanMove = false;
+        _flockAI.isInFlock = true;
+        flockCenter = _flockPrefab.transform.position;
     }
 
     //计算鱼群中心坐标

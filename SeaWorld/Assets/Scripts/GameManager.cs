@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,11 +30,7 @@ public class GameManager : MonoBehaviour
             return _instance;
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+ 
 
     // Update is called once per frame
     void Update()
@@ -54,12 +51,23 @@ public class GameManager : MonoBehaviour
     public void GameStart()
     {
         generator.active = true;
+        FlockManager.Instance.FlockPrefab.GetComponent<FlockAI>().CanMove = true;
+        FlockManager.Instance._flockPrefab.GetComponent<FlockAI>().CanMove = true;
+        FlockManager.Instance.FlockPrefab.GetComponent<DestroyOffscreen>().canShutDown= true;
         StartCoroutine(ChangeSpeed());
     }
 
     public void GameOver()
     {
-        Application.Quit();
+        if (FlockManager.Instance.Flocks.Count ==0)
+        {
+            UIManager.Instance.GameOver();
+        }
+    }
+
+    public void GameRestart()
+    {
+        SceneManager.LoadScene("Demo1");
     }
 
 

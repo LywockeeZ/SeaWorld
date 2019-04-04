@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnlimitedGenerator : MonoBehaviour
+public class UnlimitedModeGenerator : MonoBehaviour
 {
     public float delay = 1f;
     public bool active = false;
@@ -10,18 +10,18 @@ public class UnlimitedGenerator : MonoBehaviour
     public float GenerateRadius = 8f;
 
 
-    protected static UnlimitedGenerator _instance;
-    public static UnlimitedGenerator Instance
+    protected static UnlimitedModeGenerator _instance;
+    public static UnlimitedModeGenerator Instance
     {
         get
         {
             if (_instance == null)
             {
-                _instance = FindObjectOfType<UnlimitedGenerator>();
+                _instance = FindObjectOfType<UnlimitedModeGenerator>();
                 if (_instance == null)
                 {
                     GameObject obj = new GameObject();
-                    _instance = obj.AddComponent<UnlimitedGenerator>();
+                    _instance = obj.AddComponent<UnlimitedModeGenerator>();
                 }
             }
             return _instance;

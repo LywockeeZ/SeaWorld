@@ -17,14 +17,14 @@ public class MovementController : MonoBehaviour
 
     Vector3 Direction = new Vector3(1,0,0);
     Vector3 mousePos = Vector3.zero;
-    Vector3 playerPos = Vector3.zero;
+    //Vector3 playerPos = Vector3.zero;
     bool isRotating = false;
-    float squareNeighborRadius;
+    //float squareNeighborRadius;
 
 
     void Start()
     {
-        squareNeighborRadius = neighborRadius * neighborRadius;
+        //squareNeighborRadius = neighborRadius * neighborRadius;
         StartCoroutine(ChangeDirection());
     }
 
