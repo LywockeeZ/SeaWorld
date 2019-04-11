@@ -10,7 +10,10 @@ public class Generator : MonoBehaviour
     public int[] activeCounts;        //激活状态下的个数
     public float GenerateRadius = 8f;
 
-    
+    private void Awake()
+    {
+        SpawnerManager.Instance.generators.Add(this);
+    }
 
     void Start()
     {
@@ -21,21 +24,29 @@ public class Generator : MonoBehaviour
     IEnumerator MyGenerator()
     {
         yield return new WaitForSeconds(delay);
-        if (active)
+        if (SpawnerManager.Instance.active == true)
         {
-            switch (GameManager.Instance.gameLevel)
+            if (active)
             {
-                case 1:InstantiatePrefabs(0,2);
-                    break;
-                case 2:InstantiatePrefabs(0, 3);
-                    break;
-                case 3:InstantiatePrefabs(0, 4);
-                    break;
-                default:InstantiatePrefabs(0,1);
-                    break;
+                switch (GameManager.Instance.gameLevel)
+                {
+                    case 1:
+                        InstantiatePrefabs(0, 2);
+                        break;
+                    case 2:
+                        InstantiatePrefabs(0, 3);
+                        break;
+                    case 3:
+                        InstantiatePrefabs(0, 4);
+                        break;
+                    default:
+                        InstantiatePrefabs(0, 1);
+                        break;
+                }
+
             }
-           
         }
+        
 
         StartCoroutine(MyGenerator());
     }

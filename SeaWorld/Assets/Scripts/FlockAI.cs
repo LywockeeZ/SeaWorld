@@ -7,7 +7,7 @@ public class FlockAI : MonoBehaviour
     public string Rank;
     public float idleSpeed = 1f;
     public float angleSpeed = 5f;
-    public bool CanMove = true;
+    public bool CanMove = false;
     public bool isInFlock = false;
     [Range(0, 50)]
     public float neighborRadius = 1f;
@@ -28,16 +28,23 @@ public class FlockAI : MonoBehaviour
     public Animator UIanimator;
 
 
+    //private void Awake()
+    //{
+    //    CanMove = false;
+    //    isInFlock = false;
+    //    GetComponent<DestroyOffscreen>().canShutDown = false;
+    //}
     void Start()
     {
         squareNeighborRadius = neighborRadius * neighborRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
         flockList = FlockManager.Instance.Flocks;
         StartCoroutine(ChangeDirection());
+        
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (CanMove)
         {
@@ -48,7 +55,7 @@ public class FlockAI : MonoBehaviour
             else
             {
            
-                FlockMove();
+                //FlockMove();
                 if (CheckState())
                 {
                     CheckAround();
@@ -217,6 +224,9 @@ public class FlockAI : MonoBehaviour
                 CameraController.Instance.CamZoomIncreaseStart();
                 _flockAI.UIanimator.SetTrigger("Flocked");
                 GameManager.Instance.scores += FlockManager.Instance.Flocks.Count;
+                var sharkcontroller = c.gameObject.GetComponent<SharkController>();
+                sharkcontroller.yaw = FlockManager.Instance.yaw;
+                sharkcontroller.pitch = FlockManager.Instance.pitch;
             }
         }
     }

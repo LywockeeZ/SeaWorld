@@ -18,6 +18,8 @@ public class FlockManager : MonoBehaviour
     public float visualBoundary = 10f;
     public Vector3 visualBoundaryOffset = Vector3.zero;
     public GameObject _flockPrefab { get; set; }
+    public float yaw = 0;
+    public float pitch = 0;
 
     protected static FlockManager _instance;
     public static FlockManager Instance
@@ -56,6 +58,8 @@ public class FlockManager : MonoBehaviour
         if (Flocks.Count != 0)
         {
             flockRotation = Flocks[0].rotation;
+            //yaw = Flocks[0].GetComponent<SharkController>().yaw;
+            //pitch = Flocks[0].GetComponent<SharkController>().pitch;
         }
         
     }
@@ -121,6 +125,17 @@ public class FlockManager : MonoBehaviour
         }
         
         return flockDirection;
+    }
+
+
+    public void SetPitchAndYaw()
+    {
+
+            yaw += Input.GetAxis("Mouse X") * 0.1f;
+            pitch -= Input.GetAxis("Mouse Y") * 0.1f;
+            yaw = Mathf.Clamp(yaw, -1f, 1f);
+            pitch = Mathf.Clamp(pitch, -1f, 1f);
+        
     }
 
     private void OnDrawGizmos()

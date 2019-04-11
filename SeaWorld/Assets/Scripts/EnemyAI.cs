@@ -30,6 +30,7 @@ public class EnemyAI : MonoBehaviour
     float squareNeighborRadius;
     float squareAvoidanceRadius;
     public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
+    public SharkControllerAI sharkController;
 
 
     // Start is called before the first frame update
@@ -39,6 +40,7 @@ public class EnemyAI : MonoBehaviour
         squareNeighborRadius = neighborRadius * neighborRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
         StartCoroutine(ChangeDirection());
+        sharkController = GetComponent<SharkControllerAI>();
     }
 
 
@@ -57,7 +59,10 @@ public class EnemyAI : MonoBehaviour
         if (_target != null)
         {
             isFollowing = true;
-            Follow(_target.transform.position, move);
+            //鲨鱼模式下
+            sharkController.isFollowing = true;
+            sharkController.Follow(_target.transform.position);
+            //Follow(_target.transform.position, move);
         }
         else
         {
@@ -65,11 +70,11 @@ public class EnemyAI : MonoBehaviour
             if (isEscaping)
             {
                 
-                Idle(followSpeed);
+                //Idle(followSpeed);
             }
             else
             {
-                Idle(idleSpeed);
+                //Idle(idleSpeed);
             }      
         }
 
@@ -221,6 +226,12 @@ public class EnemyAI : MonoBehaviour
                     _flockAI.isInFlock = false;
                     other.gameObject.layer = LayerMask.NameToLayer("Unflocked");
                     FlockManager.Instance.Flocks.Remove(other.transform);
+                    var sharkController = other.gameObject.GetComponent<SharkController>();
+                    if (sharkController != null)
+                    {
+                        sharkController.yaw = 0;
+                        sharkController.pitch = 0;
+                    }
                 }
                 biteParticle.Play();
                 other.gameObject.GetComponent<RecycleGameobject>().Shutdown();

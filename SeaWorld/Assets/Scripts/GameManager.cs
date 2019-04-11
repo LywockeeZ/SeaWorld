@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int gameLevel = 1;
     float increaseSpeed = 0f;
     public float IncreaseSpeed { get { return increaseSpeed; } set { increaseSpeed = value; } }
+    private bool isGameOver = false;
 
     protected static GameManager _instance;
     public static GameManager Instance
@@ -39,7 +40,11 @@ public class GameManager : MonoBehaviour
         scoreText.text = scores.ToString();
         if (FlockManager.Instance.Flocks.Count == 0)
         {
-            GameOver();
+            if (!isGameOver)
+            {
+                //GameOver();
+            }
+            
         }
         if (increaseSpeed >4.5)
         {
@@ -50,24 +55,22 @@ public class GameManager : MonoBehaviour
 
     public void GameStart()
     {
-        generator.active = true;
+        SpawnerManager.Instance.active = true;
         FlockManager.Instance.FlockPrefab.GetComponent<FlockAI>().CanMove = true;
         FlockManager.Instance._flockPrefab.GetComponent<FlockAI>().CanMove = true;
-        FlockManager.Instance.FlockPrefab.GetComponent<DestroyOffscreen>().canShutDown= true;
+        FlockManager.Instance.FlockPrefab.GetComponent<DestroyOffscreen>().canShutDown = true;
         StartCoroutine(ChangeSpeed());
     }
 
     public void GameOver()
     {
-        if (FlockManager.Instance.Flocks.Count ==0)
-        {
-            UIManager.Instance.GameOver();
-        }
+        isGameOver = true;
+        UIManager.Instance.GameOver();
     }
 
     public void GameRestart()
     {
-        SceneManager.LoadScene("Demo1");
+        SceneManager.LoadScene(0);
     }
 
 

@@ -10,7 +10,9 @@ public class UIManager : MonoBehaviour
     public Canvas SetupMenu;
     public Canvas PauseMenu;
     public Canvas MakersMenu;
+    public Canvas GameMenu;
     public Canvas GameOverMenu;
+    public CamAnimControl camAnim;
 
 
     protected static UIManager _instance;
@@ -66,6 +68,7 @@ public class UIManager : MonoBehaviour
             case "SetupMenu": return SetupMenu;
             case "PauseMenu": return PauseMenu;
             case "MakersMenu": return MakersMenu;
+            case "GameMenu": return GameMenu;
             case "GameOverMenu":return GameOverMenu;
             default: return null;
         }

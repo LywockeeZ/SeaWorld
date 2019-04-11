@@ -29,10 +29,15 @@ public class Scroll : MonoBehaviour
     private float smoothedX, smoothedScale;
     private Vector3[] defaultScale, bigScale;
     private bool isSelected = false;
+    private string presentSelectedName;       //记录当前选中角色的名字
+    private GameObject original;
     
     
     void Start()
     {
+        presentSelectedName = names[0];
+        original = SpawnerManager.Instance.FindOriginal(presentSelectedName);
+        SpawnerManager.Instance.TraverseAllAndReplace(presentSelectedName, original, obj[0]);
         instatiatedObj = new GameObject[amount];
         points = new Vector2[amount + 1];
         defaultScale = new Vector3[amount];
@@ -46,6 +51,8 @@ public class Scroll : MonoBehaviour
             instatiatedObj[i].transform.parent = parentScroll.transform;
             defaultScale[i] = new Vector3(instatiatedObj[i].transform.localScale.x  , instatiatedObj[i].transform.localScale.y , instatiatedObj[i].transform.localScale.z );
             bigScale[i] = new Vector3(instatiatedObj[i].transform.localScale.x * 4, instatiatedObj[i].transform.localScale.y * 4, instatiatedObj[i].transform.localScale.z * 4);
+            InitState(instatiatedObj[i]);
+            
         }
         for (int y = 0; y < amount + 1 ; y++)
         {
@@ -74,7 +81,7 @@ public class Scroll : MonoBehaviour
                     characterName.text = names[i];
                     if (isSelected)
                     {
-                        ChangeToSelected(obj[i]);
+                        ChangeToSelected(obj[i], names[i]);
                     }
                 }
                 else smoothedScale = Mathf.SmoothStep(defaultScale[i].x, bigScale[i].x, smoothSpeed);
@@ -102,16 +109,32 @@ public class Scroll : MonoBehaviour
         }
     }
 
-    public void ChangeToSelected(GameObject selected)
+    public void ChangeToSelected(GameObject selected , string name)
     {
         var flockPrefabBefore = FlockManager.Instance.Flocks[0];
         FlockManager.Instance._flockPrefab.SetActive(false);
         var flockPrefab = GameObjectUtil.Instantiate(selected, Vector3.zero);
+        Debug.Log(flockPrefab);
         FlockManager.Instance._flockPrefab = flockPrefab;
-        FlockManager.Instance.Init();
         FlockManager.Instance.Flocks.Remove(flockPrefabBefore);
+        //先找到之前prefab，替换回去，再将目标prefab替换成现在选择的
+        original = SpawnerManager.Instance.FindOriginal(presentSelectedName);
+        SpawnerManager.Instance.TraverseAllAndReplace(name, original, selected);
+        presentSelectedName = name;
         FlockManager.Instance.FlockPrefab = selected;
+        FlockManager.Instance.Init();
         isSelected = false;
+        UIManager.Instance.camAnim.StartBackToMainFromShop();
+    }
+
+
+    public void InitState(GameObject gameObject)
+    {
+        var flockAI = gameObject.GetComponent<FlockAI>();
+        var destroyOffScreen = gameObject.GetComponent<DestroyOffscreen>();
+        flockAI.CanMove = false;
+        flockAI.isInFlock = false;
+        destroyOffScreen.canShutDown = false;
     }
 
 }

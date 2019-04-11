@@ -39,7 +39,7 @@ public class CameraController : MonoBehaviour
         CamDistance = transform.position.z;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         
 

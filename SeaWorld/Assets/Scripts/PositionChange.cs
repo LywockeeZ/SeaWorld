@@ -5,6 +5,8 @@ using UnityEngine;
 public class PositionChange : MonoBehaviour
 {
     public float radius = 1f;
+    public bool isLight = false;
+    public Vector3 lightOffset = Vector3.zero;
     Vector3 targetPos;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +17,15 @@ public class PositionChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = GetTargetPos();
+        if (isLight)
+        {
+            transform.position = FlockManager.Instance.flockCenter + lightOffset;
+        }
+        else
+        {
+            transform.position = GetTargetPos();
+        }
+        
     }
 
 
