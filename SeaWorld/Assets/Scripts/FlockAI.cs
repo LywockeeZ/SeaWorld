@@ -11,6 +11,7 @@ public class FlockAI : MonoBehaviour
     public bool isInFlock = false;
     [Range(0, 50)]
     public float neighborRadius = 1f;
+    public Vector3 offset = Vector3.zero;
     [Range(0f, 1f)]
     public float avoidanceRadiusMultiplier = 0.5f;
     public float maxDirectionChangeTime = 5f;
@@ -26,6 +27,8 @@ public class FlockAI : MonoBehaviour
     Vector2 currentVelocity;
     public float agentSmoothTime = 0.5f;
     public Animator UIanimator;
+    private SharkController sharkController;
+    private float camDistence;
 
 
     //private void Awake()
@@ -40,7 +43,7 @@ public class FlockAI : MonoBehaviour
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
         flockList = FlockManager.Instance.Flocks;
         StartCoroutine(ChangeDirection());
-        
+        sharkController = GetComponent<SharkController>();
     }
 
 
@@ -204,7 +207,8 @@ public class FlockAI : MonoBehaviour
     public void CheckAround()
     {
         //List<Transform> context = new List<Transform>();
-        Collider[] colliders = Physics.OverlapSphere(transform.position, neighborRadius, 1 << LayerMask.NameToLayer("Unflocked"));
+        Collider[] colliders = Physics.OverlapSphere(transform.position + offset, neighborRadius, 1 << LayerMask.NameToLayer("Unflocked"));
+
         foreach (Collider c in colliders)
         {
             
@@ -225,6 +229,8 @@ public class FlockAI : MonoBehaviour
                 _flockAI.UIanimator.SetTrigger("Flocked");
                 GameManager.Instance.scores += FlockManager.Instance.Flocks.Count;
                 var sharkcontroller = c.gameObject.GetComponent<SharkController>();
+                CameraController.Instance.CamDistance -= 2;
+                CameraController.Instance.offset = new Vector3(CameraController.Instance.offset.x, CameraController.Instance.offset.y + 1, CameraController.Instance.offset.z);
                 sharkcontroller.yaw = FlockManager.Instance.yaw;
                 sharkcontroller.pitch = FlockManager.Instance.pitch;
             }
@@ -269,6 +275,7 @@ public class FlockAI : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, neighborRadius);
+        Gizmos.DrawWireSphere(transform.position + offset, neighborRadius);
+ 
     }
 }

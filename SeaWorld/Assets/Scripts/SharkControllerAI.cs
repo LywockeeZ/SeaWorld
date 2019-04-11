@@ -201,7 +201,7 @@ public class SharkControllerAI : MonoBehaviour
             sharkAnim.SetBool(isRollingHash, false);
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) && (forward > 0.1f || forward < -0.1f))
+        if (Input.GetKey(KeyCode.RightShift) && (forward > 0.1f || forward < -0.1f))
         {
             animatorVelocity = Mathf.Lerp(animatorVelocity, animatorVelocityWithShift, normalToShiftVelocityTime * Time.deltaTime);
             actualForward = Mathf.Lerp(actualForward, forwardShiftMaxSpeed, normalToShiftVelocityTime * Time.deltaTime);
@@ -218,28 +218,28 @@ public class SharkControllerAI : MonoBehaviour
     {
         if (!isWhaleShark)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space))// || Input.GetMouseButtonDown(0))
             {
                 int attackIndex = UnityEngine.Random.Range(0, attackAnimation + 1);
                 sharkAnim.SetTrigger(isAttackingTriggerHash);
                 sharkAnim.SetInteger(attackIndexHash, attackIndex);
             }
-            if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
+            if (Input.GetKey(KeyCode.Space))//|| Input.GetMouseButton(0))
                 sharkAnim.SetBool(isAttackingHash, true);
             else
                 sharkAnim.SetBool(isAttackingHash, false);
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space))// || Input.GetMouseButtonDown(0))
             {
                 timeStartAbsorb = Time.time;
                 Debug.Log("Absorbing");
             }
-            else if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
+            else if (Input.GetKeyUp(KeyCode.Space))// || Input.GetMouseButtonUp(0))
                 sharkAnim.SetBool(isAttackingHash, false);
 
-            if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
+            if (Input.GetKey(KeyCode.Space))// || Input.GetMouseButton(0))
             {
                 sharkAnim.SetBool(isAttackingHash, true);
 
@@ -282,6 +282,7 @@ public class SharkControllerAI : MonoBehaviour
             Vector3 forwardMovement = transform.position + transform.forward * actualForward * swimmingSpeedMult;
             sharkRb.MovePosition(forwardMovement);
             Vector3 deltaRotation;
+            //Follow时的行为全部使用Follow函数里的
             if (!isFollowing)
             {
                 if (!isEnemyIdle)
@@ -295,15 +296,24 @@ public class SharkControllerAI : MonoBehaviour
 
                     Quaternion desireRotation = sharkRb.rotation * Quaternion.Euler(deltaRotation);
                     desireRotation = Quaternion.Euler(new Vector3(desireRotation.eulerAngles.x, desireRotation.eulerAngles.y, 0));
-                    if (desireRotation.eulerAngles.x >= 70 && desireRotation.eulerAngles.x < 180)
-                        desireRotation = Quaternion.Euler(new Vector3(70, desireRotation.eulerAngles.y, 0));
-                    if (desireRotation.eulerAngles.x > 180 && desireRotation.eulerAngles.x <= 290)
-                        desireRotation = Quaternion.Euler(new Vector3(290, desireRotation.eulerAngles.y, 0));
+                    if (desireRotation.eulerAngles.x >= 45 && desireRotation.eulerAngles.x < 180)
+                        desireRotation = Quaternion.Euler(new Vector3(45, desireRotation.eulerAngles.y, 0));
+                    if (desireRotation.eulerAngles.x > 180 && desireRotation.eulerAngles.x <= 315)
+                        desireRotation = Quaternion.Euler(new Vector3(315, desireRotation.eulerAngles.y, 0));
                     if (desireRotation.eulerAngles.y >= 90 && desireRotation.eulerAngles.y < 135)
                         desireRotation = Quaternion.Euler(new Vector3(desireRotation.eulerAngles.x, 90, 0));
                     if (desireRotation.eulerAngles.y >= 135 && desireRotation.eulerAngles.y <= 270)
                         desireRotation = Quaternion.Euler(new Vector3(desireRotation.eulerAngles.x, 270, 0));
                     sharkRb.MoveRotation(Quaternion.Lerp(sharkRb.rotation, desireRotation, 0.6f));
+
+                    if (transform.rotation.x == 45 || transform.position.x == 315)
+                    {
+                        pitch = Mathf.Lerp(pitch, 0, autoPitchRollSpeed);
+                    }
+                    if (transform.rotation.y == 90 || transform.position.y == 270)
+                    {
+                        yaw = Mathf.Lerp(yaw, 0, autoPitchRollSpeed);
+                    }
                     //if (Vector3.Angle(randomValue, transform.forward) < 0.01f)
                     //{
                     //    isChangeing = false;
@@ -467,9 +477,14 @@ public class SharkControllerAI : MonoBehaviour
         isChangeing = false;
         yaw = 0;
         pitch = 0;
-        forward = 1f;
+        forward = 0.8f;
         Quaternion rotate = Quaternion.LookRotation(target - transform.position, Vector3.up);
         transform.localRotation = Quaternion.Slerp(transform.localRotation, rotate, autoPitchRollSpeed);
 
+    }
+
+    private void OnEnable()
+    {
+        StartCoroutine(ChangeDirection());
     }
 }

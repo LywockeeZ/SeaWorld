@@ -114,7 +114,7 @@ public class Scroll : MonoBehaviour
         var flockPrefabBefore = FlockManager.Instance.Flocks[0];
         FlockManager.Instance._flockPrefab.SetActive(false);
         var flockPrefab = GameObjectUtil.Instantiate(selected, Vector3.zero);
-        Debug.Log(flockPrefab);
+        //Debug.Log(flockPrefab);
         FlockManager.Instance._flockPrefab = flockPrefab;
         FlockManager.Instance.Flocks.Remove(flockPrefabBefore);
         //先找到之前prefab，替换回去，再将目标prefab替换成现在选择的
@@ -125,6 +125,9 @@ public class Scroll : MonoBehaviour
         FlockManager.Instance.Init();
         isSelected = false;
         UIManager.Instance.camAnim.StartBackToMainFromShop();
+        
+
+
     }
 
 

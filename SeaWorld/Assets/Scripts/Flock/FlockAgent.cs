@@ -23,7 +23,7 @@ public class FlockAgent : MonoBehaviour
     }
 
     //需要改进的地方
-    public void Move(Vector2 velocity)
+    public void Move(Vector3 velocity)
     {
         Vector3 _velocity = (Vector3)velocity;//new Vector3(velocity.x, velocity.y, 0);
         //transform.forward = velocity;

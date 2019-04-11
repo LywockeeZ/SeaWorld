@@ -5,25 +5,25 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Cohesion")]
 public class CohesionBehavior : FilterFlockBehavior
 {
-    public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
+    public override Vector3 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
     {
         //如果没有邻居，就不用调整
         if (context.Count == 0 || (filter.Filter(agent, context).Count == 0))
         {
-            return Vector2.zero;
+            return Vector3.zero;
         }
 
         //把所有点聚集起来，并且求平均值
-        Vector2 cohesionMove = Vector2.zero;
+        Vector3 cohesionMove = Vector3.zero;
         List<Transform> filteredContext = (filter == null) ? context : filter.Filter(agent, context);
         foreach (Transform item in filteredContext)
         {
-            cohesionMove += (Vector2)item.position;
+            cohesionMove += (Vector3)item.position;
         }
         cohesionMove /= filteredContext.Count;
 
         //对agent的位置计算一下偏差
-        cohesionMove -= (Vector2)agent.transform.position;
+        cohesionMove -= (Vector3)agent.transform.position;
         return cohesionMove;
     }
 

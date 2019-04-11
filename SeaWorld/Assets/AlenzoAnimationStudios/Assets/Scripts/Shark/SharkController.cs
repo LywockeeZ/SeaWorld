@@ -67,12 +67,16 @@ public class SharkController : MonoBehaviour
     private PlayerStats sharkStats;
 
     private FlockAI myFlockAI;
+    private bool isInFlock = false;
+    private bool isChangeing = false;
+    private bool isXYalign = false;
+    public Vector2 randomValue = Vector2.zero;
 
     #region AnimatorParameters
     private float animatorVelocity = 1;
     private bool isMoving = false;
     private bool isRolling = false;
-    private float forward = 0;
+    public float forward = 0;
     private float actualForward = 0;
     public float yaw = 0;
     public float pitch = 0;
@@ -112,11 +116,13 @@ public class SharkController : MonoBehaviour
         //sharkRb.angularDrag = 1f;
         //sharkRb.constraints = RigidbodyConstraints.FreezeRotationZ;
 
+        
         myFlockAI = GetComponent<FlockAI>();
-}
+    }
 	
 	void Update ()
     {
+        isInFlock = myFlockAI.isInFlock;
         if (myFlockAI.CanMove && myFlockAI.isInFlock)
         {
             AnimatorStateMachine();
@@ -260,13 +266,14 @@ public class SharkController : MonoBehaviour
         if (disableSwimming)
             return;
         Locomotion();
+ 
     }
 
     private void AutoXZalign()
     {
         if (autoPitchRollAlign && !isMoving)
         {
-            Vector3 xzAlignVector = new Vector3(0, transform.rotation.eulerAngles.y, 0);
+            Vector3 xzAlignVector = new Vector3(0, 90, 0);
             Quaternion desireRotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(xzAlignVector), autoPitchRollSpeed);
             sharkRb.MoveRotation(desireRotation);
         }
@@ -276,47 +283,57 @@ public class SharkController : MonoBehaviour
     {
         if (isMoving || isRolling)
         {
+
             Vector3 forwardMovement = transform.position + transform.forward * actualForward * swimmingSpeedMult;
             Vector3 cohesionMove = myFlockAI.CalculateCohesion();
             sharkRb.MovePosition(forwardMovement + 0.05f * cohesionMove);
+            
+            
+            
             Vector3 deltaRotation;
+            
+            
 
-            if (!mouseRotationControlled)
+            if (isInFlock)
             {
-                deltaRotation = new Vector3(pitch * pitchSpeed, yaw * yawSpeed, -roll * rollSpeed) * rotateShiftMultKeyboard;
-                sharkRb.MoveRotation(sharkRb.rotation * Quaternion.Euler(deltaRotation));
+                if (!mouseRotationControlled)
+                {
+                    deltaRotation = new Vector3(pitch * pitchSpeed, yaw * yawSpeed, -roll * rollSpeed) * rotateShiftMultKeyboard;
+                    sharkRb.MoveRotation(sharkRb.rotation * Quaternion.Euler(deltaRotation));
+                }
+                else
+                {
+                    deltaRotation = new Vector3(pitch, yaw *2, 0) * rotateShiftMultMouse;
+
+                    Quaternion desireRotation = sharkRb.rotation * Quaternion.Euler(deltaRotation);
+                    desireRotation = Quaternion.Euler(new Vector3(desireRotation.eulerAngles.x, desireRotation.eulerAngles.y, 0));
+                    if (desireRotation.eulerAngles.x >= 45 && desireRotation.eulerAngles.x < 180)
+                        desireRotation = Quaternion.Euler(new Vector3(45, desireRotation.eulerAngles.y, 0));
+                    if (desireRotation.eulerAngles.x > 180 && desireRotation.eulerAngles.x <= 315)
+                        desireRotation = Quaternion.Euler(new Vector3(315, desireRotation.eulerAngles.y, 0));
+                    if (desireRotation.eulerAngles.y >= 90 && desireRotation.eulerAngles.y < 135)
+                        desireRotation = Quaternion.Euler(new Vector3(desireRotation.eulerAngles.x, 90, 0));
+                    if (desireRotation.eulerAngles.y >= 135 && desireRotation.eulerAngles.y <= 270)
+                        desireRotation = Quaternion.Euler(new Vector3(desireRotation.eulerAngles.x, 270, 0));
+                    sharkRb.MoveRotation(Quaternion.Lerp(sharkRb.rotation, desireRotation, 0.6f));
+
+                    //Vector3 relativePos = (raycastHit.point - sharkRb.transform.position).normalized;
+                    //Quaternion desireRotation = Quaternion.LookRotation(relativePos, sharkRb.transform.up);
+                    //desireRotation.eulerAngles = new Vector3(desireRotation.eulerAngles.x, desireRotation.eulerAngles.y, 0);
+                    //sharkRb.rotation = Quaternion.Lerp(sharkRb.rotation, desireRotation, Time.deltaTime * rotateShiftMultMouse);
+                    //Limit the rotation, very important for not get a weir result.
+
+
+                    //if (sharkRb.rotation.eulerAngles.x >= 45 && sharkRb.rotation.eulerAngles.x <180)
+                    //    sharkRb.transform.rotation = Quaternion.Euler(new Vector3(45, sharkRb.rotation.eulerAngles.y, sharkRb.rotation.eulerAngles.z));
+                    //if (sharkRb.rotation.eulerAngles.x >= 180 && sharkRb.rotation.eulerAngles.x <= 315)
+                    //    sharkRb.transform.rotation = Quaternion.Euler(new Vector3(315, sharkRb.rotation.eulerAngles.y, sharkRb.rotation.eulerAngles.z));
+                }
             }
             else
-            {
-                deltaRotation = new Vector3(pitch, yaw, 0) * rotateShiftMultMouse;
-
-                Quaternion desireRotation = sharkRb.rotation * Quaternion.Euler(deltaRotation);
-                desireRotation = Quaternion.Euler(new Vector3(desireRotation.eulerAngles.x, desireRotation.eulerAngles.y, 0));
-                if (desireRotation.eulerAngles.x >= 45 && desireRotation.eulerAngles.x < 180)
-                    desireRotation = Quaternion.Euler(new Vector3(45, desireRotation.eulerAngles.y, 0));
-                if (desireRotation.eulerAngles.x > 180 && desireRotation.eulerAngles.x <= 315)
-                    desireRotation = Quaternion.Euler(new Vector3(315, desireRotation.eulerAngles.y, 0));
-                if (desireRotation.eulerAngles.y >= 90 && desireRotation.eulerAngles.y < 135)
-                    desireRotation = Quaternion.Euler(new Vector3(desireRotation.eulerAngles.x, 90, 0));
-                if (desireRotation.eulerAngles.y >= 135 && desireRotation.eulerAngles.y <= 270)
-                    desireRotation = Quaternion.Euler(new Vector3(desireRotation.eulerAngles.x, 270, 0));
-                sharkRb.MoveRotation(Quaternion.Lerp(sharkRb.rotation, desireRotation, 0.6f));
-
-                //Vector3 relativePos = (raycastHit.point - sharkRb.transform.position).normalized;
-                //Quaternion desireRotation = Quaternion.LookRotation(relativePos, sharkRb.transform.up);
-                //desireRotation.eulerAngles = new Vector3(desireRotation.eulerAngles.x, desireRotation.eulerAngles.y, 0);
-                //sharkRb.rotation = Quaternion.Lerp(sharkRb.rotation, desireRotation, Time.deltaTime * rotateShiftMultMouse);
-                //Limit the rotation, very important for not get a weir result.
-
-
-                //if (sharkRb.rotation.eulerAngles.x >= 45 && sharkRb.rotation.eulerAngles.x <180)
-                //    sharkRb.transform.rotation = Quaternion.Euler(new Vector3(45, sharkRb.rotation.eulerAngles.y, sharkRb.rotation.eulerAngles.z));
-                //if (sharkRb.rotation.eulerAngles.x >= 180 && sharkRb.rotation.eulerAngles.x <= 315)
-                //    sharkRb.transform.rotation = Quaternion.Euler(new Vector3(315, sharkRb.rotation.eulerAngles.y, sharkRb.rotation.eulerAngles.z));
-            }
+                sharkRb.velocity = Vector3.Lerp(sharkRb.velocity, Vector3.zero, Time.deltaTime * 1f);
         }
-        else
-            sharkRb.velocity = Vector3.Lerp(sharkRb.velocity, Vector3.zero, Time.deltaTime * 1f);
+            
     }
 
     #region Be_Bitten
@@ -419,4 +436,7 @@ public class SharkController : MonoBehaviour
         meatDetector.SetActive(false);
     }
     #endregion
+
+
+   
 }

@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector2 move = Vector2.zero;
         //获取周围的对象，同时给要跟随的对象赋值
@@ -61,7 +61,7 @@ public class EnemyAI : MonoBehaviour
             isFollowing = true;
             //鲨鱼模式下
             sharkController.isFollowing = true;
-            sharkController.Follow(_target.transform.position);
+            sharkController.Follow(FlockManager.Instance.flockCenter);
             //Follow(_target.transform.position, move);
         }
         else
@@ -222,6 +222,8 @@ public class EnemyAI : MonoBehaviour
                     //关闭之前初始化
                     CameraController.Instance.CamShake();
                     CameraController.Instance.CamZoomDecreaseStart();
+                    CameraController.Instance.CamDistance += 2;
+                    CameraController.Instance.offset = new Vector3(CameraController.Instance.offset.x, CameraController.Instance.offset.y - 1, CameraController.Instance.offset.z);
                     var _flockAI = other.gameObject.GetComponent<FlockAI>();
                     _flockAI.isInFlock = false;
                     other.gameObject.layer = LayerMask.NameToLayer("Unflocked");

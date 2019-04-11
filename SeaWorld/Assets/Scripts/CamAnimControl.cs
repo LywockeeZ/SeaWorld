@@ -22,6 +22,7 @@ public class CamAnimControl : MonoBehaviour
     {
         UIManager.Instance.Open("MainMenu");
         animator.enabled = false;
+        
 
     }
 

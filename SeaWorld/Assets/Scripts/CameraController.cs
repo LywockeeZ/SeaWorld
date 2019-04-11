@@ -59,7 +59,7 @@ public class CameraController : MonoBehaviour
     IEnumerator  CamZoomIncrease()
     {
         yield return null;
-        viewAfter += 0.05F;
+        viewAfter += 0.1F;
         Camera.main.fieldOfView = viewAfter;
         if (viewAfter - viewBefore >= 1f)
         {
@@ -72,7 +72,7 @@ public class CameraController : MonoBehaviour
     IEnumerator CamZoomDecrease()
     {
         yield return null;
-        viewAfter -= 0.05F;
+        viewAfter -= 0.1F;
         Camera.main.fieldOfView = viewAfter;
         if (viewBefore - viewAfter >= 1f)
         {

@@ -10,6 +10,7 @@ public class RecycleGameobject : MonoBehaviour
         //var temp = gameObject.transform.position;
         //gameObject.transform.position = new Vector3(temp.x, temp.y, 0);
         gameObject.SetActive(true);
+       
     }
 
     public void Shutdown()

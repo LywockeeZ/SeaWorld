@@ -60,6 +60,9 @@ public class GameManager : MonoBehaviour
         FlockManager.Instance._flockPrefab.GetComponent<FlockAI>().CanMove = true;
         FlockManager.Instance.FlockPrefab.GetComponent<DestroyOffscreen>().canShutDown = true;
         StartCoroutine(ChangeSpeed());
+        var rank = (int)FlockManager.Instance._flockPrefab.GetComponent<FlockAI>().Rank[4] - 48;
+        CameraController.Instance.CamDistance = -15 - rank;
+        CameraController.Instance.offset = new Vector3(CameraController.Instance.offset.x, CameraController.Instance.offset.y + (float)rank / 2 +2 , CameraController.Instance.offset.z);
     }
 
     public void GameOver()

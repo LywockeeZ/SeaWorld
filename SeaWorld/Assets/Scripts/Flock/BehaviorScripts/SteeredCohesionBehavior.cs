@@ -6,29 +6,29 @@ using UnityEngine;
 public class SteeredCohesionBehavior : FilterFlockBehavior
 {
 
-    Vector2 currentVelocity = new Vector2 (1,1);
+    Vector3 currentVelocity = new Vector3 (1,1,0);
     public float agentSmoothTime = 0.5f;
 
-    public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
+    public override Vector3 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
     {
         //如果没有邻居，就不用调整
         if (context.Count == 0 || (filter.Filter(agent, context).Count == 0))
         {
-            return Vector2.zero;
+            return Vector3.zero;
         }
 
         //把所有点聚集起来，并且求平均值
-        Vector2 cohesionMove = Vector2.zero;
+        Vector3 cohesionMove = Vector3.zero;
         List<Transform> filteredContext = (filter == null) ? context: filter.Filter(agent, context);
         foreach (Transform item in filteredContext)
         {
-            cohesionMove += (Vector2)item.position;
+            cohesionMove += (Vector3)item.position;
         }
         cohesionMove /= filteredContext.Count;
 
         //对agent的位置计算一下偏差
-        cohesionMove -= (Vector2)agent.transform.position;
-        cohesionMove = Vector2.SmoothDamp(agent.transform.forward, cohesionMove, ref currentVelocity, agentSmoothTime);
+        cohesionMove -= (Vector3)agent.transform.position;
+        cohesionMove = Vector3.SmoothDamp(agent.transform.forward, cohesionMove, ref currentVelocity, agentSmoothTime);
         return cohesionMove;
     }
 }
