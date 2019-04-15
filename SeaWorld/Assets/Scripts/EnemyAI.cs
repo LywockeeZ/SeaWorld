@@ -31,6 +31,8 @@ public class EnemyAI : MonoBehaviour
     float squareAvoidanceRadius;
     public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
     public SharkControllerAI sharkController;
+    public bool isShark;
+    public bool canFollow;
 
 
     // Start is called before the first frame update
@@ -40,7 +42,11 @@ public class EnemyAI : MonoBehaviour
         squareNeighborRadius = neighborRadius * neighborRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
         StartCoroutine(ChangeDirection());
-        sharkController = GetComponent<SharkControllerAI>();
+        if (isShark)
+        {
+            sharkController = GetComponent<SharkControllerAI>();
+        }
+        
     }
 
 
@@ -60,22 +66,34 @@ public class EnemyAI : MonoBehaviour
         {
             isFollowing = true;
             //鲨鱼模式下
-            sharkController.isFollowing = true;
-            sharkController.Follow(FlockManager.Instance.flockCenter);
-            //Follow(_target.transform.position, move);
+            if (canFollow)
+            {
+                if (isShark)
+                {
+                    sharkController.isFollowing = true;
+                    sharkController.Follow(FlockManager.Instance.flockCenter);
+                }
+                else Follow(_target.transform.position, move);
+            }
+            
+
         }
         else
         {
             isFollowing = false;
-            if (isEscaping)
+            if (!isShark)
             {
-                
-                //Idle(followSpeed);
+                if (isEscaping)
+                {
+
+                    Idle(followSpeed);
+                }
+                else
+                {
+                    Idle(idleSpeed);
+                }
             }
-            else
-            {
-                //Idle(idleSpeed);
-            }      
+            
         }
 
 
@@ -222,18 +240,23 @@ public class EnemyAI : MonoBehaviour
                     //关闭之前初始化
                     CameraController.Instance.CamShake();
                     CameraController.Instance.CamZoomDecreaseStart();
-                    CameraController.Instance.CamDistance += 2;
-                    CameraController.Instance.offset = new Vector3(CameraController.Instance.offset.x, CameraController.Instance.offset.y - 1, CameraController.Instance.offset.z);
+                    CameraController.Instance.CamDistance += 0.5f;
+                    CameraController.Instance.offset = new Vector3(CameraController.Instance.offset.x, CameraController.Instance.offset.y - 0.25f, CameraController.Instance.offset.z);
+                    GameManager.Instance.HitSound.Play();
                     var _flockAI = other.gameObject.GetComponent<FlockAI>();
                     _flockAI.isInFlock = false;
                     other.gameObject.layer = LayerMask.NameToLayer("Unflocked");
                     FlockManager.Instance.Flocks.Remove(other.transform);
-                    var sharkController = other.gameObject.GetComponent<SharkController>();
-                    if (sharkController != null)
+                    if (_flockAI.isShark)
                     {
-                        sharkController.yaw = 0;
-                        sharkController.pitch = 0;
+                        var sharkController = other.gameObject.GetComponent<SharkController>();
+                        if (sharkController != null)
+                        {
+                            sharkController.yaw = 0;
+                            sharkController.pitch = 0;
+                        }
                     }
+                    
                 }
                 biteParticle.Play();
                 other.gameObject.GetComponent<RecycleGameobject>().Shutdown();

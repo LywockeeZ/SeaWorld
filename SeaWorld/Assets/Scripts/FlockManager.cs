@@ -68,7 +68,6 @@ public class FlockManager : MonoBehaviour
     public void Init()
     {
         var _flockAI = _flockPrefab.GetComponent<FlockAI>();
-        Flocks.Add(_flockPrefab.transform);
         _flockPrefab.layer = 0;
         flockDirection = new Vector3(1,0,0);
         flockRotation = _flockPrefab.transform.rotation;
@@ -76,6 +75,8 @@ public class FlockManager : MonoBehaviour
         _flockAI.CanMove = false;
         _flockAI.isInFlock = true;
         flockCenter = _flockPrefab.transform.position;
+        Flocks.Add(_flockPrefab.transform);
+
     }
 
     //计算鱼群中心坐标

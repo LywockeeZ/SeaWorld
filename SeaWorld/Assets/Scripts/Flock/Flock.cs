@@ -25,6 +25,7 @@ public class Flock : MonoBehaviour
     protected float squareNeighborRadius;
     protected float squareAvoidanceRadius;
     public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
+    public Vector3 offset = Vector3.zero;
 
     // Start is called before the first frame update
     public virtual void Start()
@@ -35,9 +36,10 @@ public class Flock : MonoBehaviour
 
         for (int i = 0; i < startingCount; i++)
         {
+            var pos = Random.insideUnitCircle * startingCount * AgentDensity;
             FlockAgent newAgent = Instantiate(
                 agentPrefab,
-                Random.insideUnitCircle * startingCount * AgentDensity,
+                new Vector3(pos.x + offset.x, pos.y + offset.y , offset.z),
                 Quaternion.Euler(Vector3.forward * Random.Range(0f,360f)),
                 transform
                 );

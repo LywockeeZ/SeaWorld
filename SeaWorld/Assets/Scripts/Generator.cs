@@ -31,16 +31,16 @@ public class Generator : MonoBehaviour
                 switch (GameManager.Instance.gameLevel)
                 {
                     case 1:
-                        InstantiatePrefabs(0, 2);
+                        InstantiatePrefabs(0, 1);
                         break;
                     case 2:
                         InstantiatePrefabs(0, 3);
                         break;
                     case 3:
-                        InstantiatePrefabs(0, 4);
+                        InstantiatePrefabs(0, 6);
                         break;
                     default:
-                        InstantiatePrefabs(0, 1);
+                        InstantiatePrefabs(0, 7);
                         break;
                 }
 
@@ -58,10 +58,10 @@ public class Generator : MonoBehaviour
         for (int index = initIndex; index <= maxIndex; index++)
         {
             ObjectPool targetPool = null;
-            if (GameObjectUtil.poolList.Count != 0)
+            if (SpawnerManager.Instance.poolList.Count != 0)
             {
                 //获得相应的对象池
-                foreach (var item in GameObjectUtil.poolList)
+                foreach (var item in SpawnerManager.Instance.poolList)
                 {
                     if (item.gameObject.name == prefabs[index].name + "ObjectPool")
                     {

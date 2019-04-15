@@ -7,6 +7,8 @@ public class SpawnerManager : MonoBehaviour
     public List<Generator> generators = new List<Generator>();
     public GameObject[] basicGameobject; 
     public bool active = false;
+    public  List<ObjectPool> poolList = new List<ObjectPool>(); //使外界能够获取所有的对象池
+    public  Dictionary<RecycleGameobject, ObjectPool> pools = new Dictionary<RecycleGameobject, ObjectPool>();
 
 
     protected static SpawnerManager _instance;

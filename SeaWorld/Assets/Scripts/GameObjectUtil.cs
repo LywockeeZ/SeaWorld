@@ -42,18 +42,21 @@ public class GameObjectUtil
     private static ObjectPool GetObjectPool(RecycleGameobject reference)
     {
         ObjectPool pool = null;
-        if (pools.ContainsKey(reference))
+        if (SpawnerManager.Instance.pools.ContainsKey(reference))
         {
-            pool = pools[reference];
+            //pool = pools[reference];
+            pool = SpawnerManager.Instance.pools[reference];
         }
         else
         {
             //如果所查询的对象池不存在则创建一个新的
             var poolContainer = new GameObject(reference.gameObject.name + "ObjectPool");
             pool = poolContainer.AddComponent<ObjectPool>();
+            SpawnerManager.Instance.poolList.Add(pool);
             poolList.Add(pool);
             pool.prefab = reference;
-            pools.Add(reference, pool);
+            SpawnerManager.Instance.pools.Add(reference, pool);
+            //pools.Add(reference, pool);
         }
         return pool;
     }

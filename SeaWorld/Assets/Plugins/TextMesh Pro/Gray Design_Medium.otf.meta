@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: ca3950618e5c6054db77f211a770fa16
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gray Design
+  fontNames:
+  - Gray Design
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: ae2e65c08ea7d944ba002c9d08faa3af, type: 3}
+  - {fileID: 12800000, guid: 1f597b3122591534c801e08c46d7e0a7, type: 3}
+  - {fileID: 12800000, guid: 96340ad8430f7ce42b2d66740afd911b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

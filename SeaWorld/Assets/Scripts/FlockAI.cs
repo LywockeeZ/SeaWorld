@@ -27,6 +27,7 @@ public class FlockAI : MonoBehaviour
     Vector2 currentVelocity;
     public float agentSmoothTime = 0.5f;
     public Animator UIanimator;
+    public bool isShark;
     private SharkController sharkController;
     private float camDistence;
 
@@ -57,8 +58,11 @@ public class FlockAI : MonoBehaviour
             }
             else
             {
-           
-                //FlockMove();
+                if (!isShark)
+                {
+                    FlockMove();
+                }
+
                 if (CheckState())
                 {
                     CheckAround();
@@ -228,11 +232,16 @@ public class FlockAI : MonoBehaviour
                 CameraController.Instance.CamZoomIncreaseStart();
                 _flockAI.UIanimator.SetTrigger("Flocked");
                 GameManager.Instance.scores += FlockManager.Instance.Flocks.Count;
-                var sharkcontroller = c.gameObject.GetComponent<SharkController>();
-                CameraController.Instance.CamDistance -= 2;
-                CameraController.Instance.offset = new Vector3(CameraController.Instance.offset.x, CameraController.Instance.offset.y + 1, CameraController.Instance.offset.z);
-                sharkcontroller.yaw = FlockManager.Instance.yaw;
-                sharkcontroller.pitch = FlockManager.Instance.pitch;
+                GameManager.Instance.ScoredSound.Play();
+                CameraController.Instance.CamDistance -= 0.5f;
+                CameraController.Instance.offset = new Vector3(CameraController.Instance.offset.x, CameraController.Instance.offset.y + 0.25f, CameraController.Instance.offset.z);
+                if (_flockAI.isShark)
+                {
+                    var sharkcontroller = c.gameObject.GetComponent<SharkController>();
+                    sharkcontroller.yaw = FlockManager.Instance.yaw;
+                    sharkcontroller.pitch = FlockManager.Instance.pitch;
+                }
+                
             }
         }
     }
@@ -265,10 +274,13 @@ public class FlockAI : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //吃掉等级小的 && 防止碰到身体触发 && 防止吃自己人
-        if (other.tag.CompareTo(Rank) < 0 && other.isTrigger == false && other.tag != "Player")
+        if (other.tag.CompareTo(Rank) < 0 && other.isTrigger == false && other.tag != "Player" && gameObject.layer == 0)
         {
             biteParticle.Play();
             other.gameObject.GetComponent<RecycleGameobject>().Shutdown();
+            CameraController.Instance.CamShake();
+            GameManager.Instance.scores += ((int)other.gameObject.tag[4] - 48) * 10 ;
+            GameManager.Instance.PlayerHit.Play();
         }
     }
 
